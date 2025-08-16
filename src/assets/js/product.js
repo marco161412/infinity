@@ -12,12 +12,20 @@ class Product extends BasePage {
             startingPriceTitle: '.starting-price-title',
         });
 
+        this.initProductOptionValidations();
+
         if(imageZoom){
             // call the function when the page is ready
             this.initImagesZooming();
             // listen to screen resizing
             window.addEventListener('resize', () => this.initImagesZooming());
         }
+    }
+
+    initProductOptionValidations() {
+      document.querySelector('.product-form')?.addEventListener('change', function(){
+        this.reportValidity() && salla.product.getPrice(new FormData(this));
+      });
     }
 
     initImagesZooming() {
@@ -47,31 +55,34 @@ class Product extends BasePage {
     }
 
     registerEvents() {
-        salla.product.event.onPriceUpdated((res) => {
-            app.startingPriceTitle?.classList.add('hidden');
+      salla.event.on('product::price.updated.failed',()=>{
+        app.element('.price-wrapper').classList.add('hidden');
+        app.element('.out-of-stock').classList.remove('hidden')
+        app.anime('.out-of-stock', { scale: [0.88, 1] });
+      })
+      salla.product.event.onPriceUpdated((res) => {
 
-            app.totalPrice.forEach(el => el.innerText = salla.money(res.data.price));
-            // app.totalPrice.innerText = salla.money(res.data.price);
+        app.element('.out-of-stock').classList.add('hidden')
+        app.element('.price-wrapper').classList.remove('hidden')
 
-            app.anime('.total-price', { scale: [0.88, 1] });
+        let data = res.data,
+            is_on_sale = data.has_sale_price && data.regular_price > data.price;
 
-            if (res.data.has_sale_price) {
-                app.beforePrice.forEach(el => {
-                    el.style.display = 'inline'
-                    el.innerText = salla.money(res.data.regular_price)
-                });
-                // app.beforePrice.style.display = 'inline';
-                // app.beforePrice.innerText = salla.money(res.data.regular_price);
-                return;
-            }
-            app.beforePrice.length && app.beforePrice.forEach(el => el.style.display = 'none');
-            // app.beforePrice && (app.beforePrice.style.display = 'none')
-        });
+        app.startingPriceTitle?.classList.add('hidden');
 
-        app.onClick('#btn-show-more', e => app.all('#more-content', div => {
-            e.target.classList.add('is-expanded');
-            div.style = `max-height:${div.scrollHeight}px`;
-        }) || e.target.remove());
+        app.totalPrice.forEach((el) => {el.innerHTML = salla.money(data.price)});
+        app.beforePrice.forEach((el) => {el.innerHTML = salla.money(data.regular_price)});
+
+        app.toggleClassIf('.price_is_on_sale','showed','hidden', ()=> is_on_sale)
+        app.toggleClassIf('.starting-or-normal-price','hidden','showed', ()=> is_on_sale)
+
+        app.anime('.total-price', { scale: [0.88, 1] });
+      });
+
+      app.onClick('#btn-show-more', e => app.all('#more-content', div => {
+        e.target.classList.add('is-expanded');
+        div.style = `max-height:${div.scrollHeight}px`;
+      }) || e.target.remove());
     }
 }
 
