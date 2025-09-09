@@ -1,0 +1,31 @@
+.cart-sec {
+    .cart-banner {
+        .parent-img {
+            .img {
+                height: auto;
+                object-fit: cover;
+                -o-object-fit: cover;
+                width: 100%;
+            }
+            .img.sm-img {
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .cart-sec {
+        .cart-banner {
+            .parent-img {
+                .img.big-img {
+                    display: none;
+                }
+                .img.sm-img {
+                    display: block;
+                }
+            }
+        }
+    }
+}

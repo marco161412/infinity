@@ -1,0 +1,149 @@
+
+.store-footer{
+     background-color: var(--background-footer-color,#f3f4f6);
+    .store-footer__inner{
+        background-color: var(--background-footer-color,#f3f4f6);
+        .footer-div{
+            display: flex;
+            .footer-item{
+                width: 25%;
+                padding-left: 15px;
+                h3,h4{
+                    color:  var(--color-text-footer,#374152) ;
+                }
+                .footer-desc{
+                    color: var(--color-text-footer,#374152);
+                    
+                }
+                .s-contacts{
+                  .s-contacts-list{
+                    .s-contacts-item{
+                        color: var(--color-text-footer,#374152);
+                        opacity: 0.8;
+                    }
+                  }  
+                }
+                .s-menu-footer-list{
+                    .s-menu-footer-item{
+                        color: var(--color-text-footer,#374152);
+                        opacity: 0.8;
+                    }
+                }
+                .logo-footer{
+                    margin-bottom: 10px;
+                    width: auto;
+                    display: inline-block;
+                        img{
+                            max-width: 100%;
+                            max-height: 85px;
+                            -o-object-fit: contain;
+                            object-fit: contain; 
+                        }
+                }
+                
+                .s-menu-footer-list{
+                    display: flex;
+                    gap: 10px;
+                    flex-direction: column;
+                    a{
+                        margin-bottom: 0;
+                        display: flex;
+                        font-size: 16px;
+                    }
+                    a:before{
+                        content:"\e970";
+                        font-family: "sallaicons" !important;
+                        line-height: 100%;
+                        
+
+                    }
+                    a:hover{
+                        color: var(--color-primary-dark);
+                    }
+                    
+                }
+                .s-social-list{
+                    flex-wrap: wrap;
+                    gap: 5px;
+                    a{
+                        width: 40px;
+                        height: 40px;
+                        border-color: var(--color-primary-dark);
+                        background-color: var(--color-primary);
+                        svg{
+                            fill:var(--color-primary-reverse);
+                            height: 20px;
+                            width: 20px;
+                            
+                        }
+                    }
+                }
+                .s-contacts-list{
+                    gap: 10px;
+                    a{
+
+                    }
+                    a:hover{
+                        color: var(--color-primary-dark);
+                    }
+                }
+                .contact-social{
+                    padding-top: 0px;
+                    margin-top: 0px;
+                }
+            }
+            .footer-item:last-of-type{
+                padding-left: 0px;
+
+            }
+        }
+        
+    } 
+    .copyright-text{
+            p{
+                color: var(--color-text-footer,#374152);
+            }
+        } 
+}
+
+
+
+
+
+
+
+
+
+
+/*768*/
+ @media (max-width: 768px){
+    .store-footer{
+            .store-footer__inner{
+                .footer-div{
+                    flex-wrap: wrap;
+                    row-gap: 20px;
+                    .footer-item{
+                        width: 50%;
+                        padding-left: 12px;
+                    }
+                }
+            }
+        }
+}
+
+
+ @media (max-width: 450px){
+.store-footer{
+        .store-footer__inner{
+            .footer-div{
+                        flex-wrap: wrap;
+                        row-gap: 20px;
+                        .footer-item{
+                            width: 100%;
+                            padding-left: 12px;
+                        }
+                    }
+        }
+       
+    }
+}

@@ -1,0 +1,195 @@
+.category-sec {
+    .category-banners{
+        display: flex;
+        margin-bottom: 30px;
+        gap: 10px;
+        .category-banner {
+            width: 100%;
+            .img {
+                height: auto;
+                object-fit: cover;
+                -o-object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+    .category-banners.column{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .offers-banners{
+        display: flex;
+        margin-bottom: 30px;
+        gap: 10px;
+        .offers-banner {
+            width: 100%;
+            .img {
+                height: auto;
+                object-fit: cover;
+                -o-object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+    .offers-banners.column{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .sub-categories {
+        .swiper {
+            .swiper-slide {
+                width: fit-content;
+                .sub-category-item {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    border: 1px solid #d5cdcd;
+                    padding: 10px;
+                    align-items: center;
+                    border-radius: 15px;
+                    .img-parent {
+                        width: 250px;
+                        height: 250px;
+                        overflow: hidden;
+
+                        .img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                    
+                    .text-parent {
+                        display: flex;
+                        justify-content: center;
+                        .title {
+                            font-size: 18px;
+                        }
+                    }
+                }
+                .sub-category-item:hover{
+                    .img-parent{
+                        .img{
+                            transform: scale(1.1);
+                            -webkit-transform: scale(1.1); 
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sub-categories-flex{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        
+        .sub-category-item {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border: 1px solid #d5cdcd;
+            padding: 10px;
+            align-items: center;
+            border-radius: 15px;
+            width: 20%;
+            .img-parent{
+                overflow: hidden;
+            }
+        }
+        .sub-category-item:hover{
+            .img{
+                
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1); 
+            }
+        }
+    }
+    .products-filters{
+        #filters-menu:not(:has(.s-filters-widget-container)){
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width: 1400px){
+
+}
+@media (max-width: 1200px){
+ .category-sec{
+        .sub-categories-flex{
+            .sub-category-item {
+                width: 25%;
+            }
+        }
+    }
+}
+@media (max-width: 1024px){
+
+}
+@media (max-width: 992px){
+.category-sec{
+        .sub-categories-flex{
+            .sub-category-item {
+                width: 33.3%;
+            }
+        }
+    }
+}
+@media (max-width: 900px){
+
+}
+@media (max-width: 800px){
+
+}
+@media (max-width: 768px){
+.category-sec{
+        .sub-categories-flex{
+            gap: 10px;
+            .sub-category-item{
+                .text-parent{
+                   .title{
+                    font-size: 17px;
+                   } 
+                }
+            }
+        }
+    }
+}
+@media (max-width: 650px){
+
+}
+@media (max-width: 640px){
+
+}
+@media (max-width: 600px){
+
+}
+@media (max-width: 576px){
+.category-sec {
+        .category-banners{
+            flex-direction: column;
+        }
+    }
+}
+@media (max-width: 480px){
+.category-sec{
+        .sub-categories-flex{
+            .sub-category-item{
+                width: 50%;
+                .text-parent{
+                   .title{
+                    font-size: 17px;
+                   } 
+                }
+            }
+        }
+    }
+}
+@media (max-width: 450px){
+
+}
+@media (max-width: 380px){
+
+}
