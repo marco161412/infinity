@@ -84,19 +84,14 @@
             "label": "أعلى الصفحة",
             "value": "<h5 class='bg-primary flex items-center p-4 mb-8 text-white rounded-lg'><i class='sicon-archive-upload ml-3 text-secondary text-xl'></i>خيارات أعلى الصفحة</h5>",
             "variant": "h1",
-            "icon": "sicon-format-size",
-            "groups": [
-                "header"
-            ]
+            "icon": "sicon-format-size"
+            
         },
         {
             "type": "boolean",
             "id": "transparent_header",
             "label": "أعلى الصفحة شفاف",
-            "format": "switch",
-            "groups": [
-                "header"
-            ]
+            "format": "switch"
         },
         {
             "id": "navbar",
@@ -108,10 +103,8 @@
             "icon": "sicon-toggle-off",
             "value": true,
             "selected": false,
-            "required": false,
-            "groups": [
-                "header"
-            ]
+            "required": false
+            
         },
         {
             "id": "discount_img",
@@ -142,10 +135,8 @@
                     "operation": "=",
                     "value": true
                 }
-            ],
-            "groups": [
-                "header"
             ]
+            
         },
         {
             "id": "header_is_sticky",
@@ -156,10 +147,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true,
-            "groups": [
-                "header"
-            ]
+            "selected": true
+            
         },
         {
             "id": "cart_icon",
@@ -221,10 +210,8 @@
             "source": "Manual",
             "multichoice": false,
             "searchable": true,
-            "required": false,
-            "groups": [
-                "header"
-            ]
+            "required": false
+            
         },
         {
             "type": "boolean",
@@ -235,10 +222,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": false,
-            "groups": [
-                "header"
-            ]
+            "selected": false
+            
         },
         {
             "id": "header_back_color_in_dark",
@@ -251,9 +236,7 @@
             "icon": "sicon-format-fill",
             "value": "#1d1f1f",
             "required": false,
-            "groups": [
-                "header"
-            ],
+            
             "conditions": [
                 {
                     "id": "topnav_is_dark",
@@ -273,9 +256,7 @@
             "icon": "sicon-image",
             "value": null,
             "required": false,
-            "groups": [
-                "header"
-            ],
+            
             "conditions": [
                 {
                     "id": "topnav_is_dark",
@@ -295,9 +276,7 @@
             "icon": "sicon-format-fill",
             "value": "#d6d6d7",
             "required": false,
-            "groups": [
-                "header"
-            ],
+            
             "conditions": [
                 {
                     "id": "topnav_is_dark",
