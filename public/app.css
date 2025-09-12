@@ -27593,9 +27593,6 @@ body .app-inner .home .video-sec .video-box:has(.content-video):after {
 .rtl\:mr-3:where([dir="rtl"], [dir="rtl"] *) {
     margin-right: 0.75rem;
 }
-.rtl\:mr-4:where([dir="rtl"], [dir="rtl"] *) {
-    margin-right: 1rem;
-}
 .rtl\:-scale-x-100:where([dir="rtl"], [dir="rtl"] *) {
     --tw-scale-x: -1;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(-1) scaleY(var(--tw-scale-y));

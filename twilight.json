@@ -78,11 +78,74 @@
             "format": "line"
         },
         {
+            "id": "header_title",
             "type": "static",
-            "format": "title",
-            "id": "static-label2",
-            "value": "خيارات أعلى الصفحة",
-            "variant": "h6"
+            "format": "description",
+            "label": "أعلى الصفحة",
+            "value": "<h5 class='bg-primary flex items-center p-4 mb-8 text-white rounded-lg'><i class='sicon-archive-upload ml-3 text-secondary text-xl'></i>خيارات أعلى الصفحة</h5>",
+            "variant": "h1",
+            "icon": "sicon-format-size",
+            "groups": [
+                "header"
+            ]
+        },
+        {
+            "type": "boolean",
+            "id": "transparent_header",
+            "label": "أعلى الصفحة شفاف",
+            "format": "switch",
+            "groups": [
+                "header"
+            ]
+        },
+        {
+            "id": "navbar",
+            "type": "boolean",
+            "format": "switch",
+            "label": "التصنيفات الفرعية",
+            "description": "هذه الخاصية تمكنك من إظهار وإخفاء التصنيفات الفرعية ويُنصح بالغاء تفعيلها في حالة وجود عناصر كثيرة في القائمة المنسدلة",
+            "labelHTML": null,
+            "icon": "sicon-toggle-off",
+            "value": true,
+            "selected": false,
+            "required": false,
+            "groups": [
+                "header"
+            ]
+        },
+        {
+            "id": "discount_img",
+            "type": "string",
+            "format": "image",
+            "label": "صورة لتصنيف التخفيضات",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "e.g. https://hostname.com/image.png",
+            "icon": "sicon-image",
+            "value": null,
+            "required": false
+        },
+        {
+            "id": "header_trans_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون عناصر راس الصفحة إذا كان شفاف",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#004956",
+            "required": false,
+            "conditions": [
+                {
+                    "id": "transparent_header",
+                    "operation": "=",
+                    "value": true
+                }
+            ],
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "header_is_sticky",
@@ -93,7 +156,75 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true
+            "selected": true,
+            "groups": [
+                "header"
+            ]
+        },
+        {
+            "id": "cart_icon",
+            "type": "items",
+            "format": "dropdown-list",
+            "label": "ايقونة السلة",
+            "description": "هذه الخاصية تمكنك من إختيار ايقونة للسلة",
+            "labelHTML": null,
+            "icon": "sicon-keyboard_arrow_down",
+            "selected": [
+                {
+                    "label": "ايقونة السلة 1",
+                    "value": "sicon-shopping-bag",
+                    "key": "832d33ef-d121-4bbf-9112-007df7454495"
+                }
+            ],
+            "options": [
+                {
+                    "label": "ايقونة السلة 1",
+                    "value": "sicon-shopping-bag",
+                    "key": "832d33ef-d121-4bbf-9112-007df7454495"
+                },
+                {
+                    "label": "ايقونة السلة 2",
+                    "value": "sicon-shopping-bag2",
+                    "key": "b086da90-84a2-4bdb-8f56-e60f10e7e2a5"
+                },
+                {
+                    "label": "ايقونة السلة 3",
+                    "value": "sicon-shopping",
+                    "key": "98e8faf3-6c80-4b5d-a83a-9423b07b30b3"
+                },
+                {
+                    "label": "ايقونة السلة 4",
+                    "value": "sicon-shopping-basket-alt",
+                    "key": "cd9768d1-c8f6-4762-b3ed-1042e36458c8"
+                },
+                {
+                    "label": "ايقونة السلة 5",
+                    "value": "sicon-shopping-basket",
+                    "key": "d5aed976-af6a-4560-8c9a-f24e4b77b709"
+                },
+                {
+                    "label": "ايقونة السلة 6",
+                    "value": "sicon-cart",
+                    "key": "357ca1f9-e535-4d91-9b1d-dda132d06d14"
+                },
+                {
+                    "label": "ايقونة السلة 7",
+                    "value": "sicon-cart2",
+                    "key": "b201fa51-5e61-4a97-9158-3a4d5aa86216"
+                },
+                {
+                    "label": "ايقونة السلة 8",
+                    "value": "sicon-cart22",
+                    "key": "5a8193e6-a6d8-44c4-b3e6-e9333f3345c5"
+                }
+            ],
+            "source": "Manual",
+            "multichoice": false,
+            "searchable": true,
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "type": "boolean",
@@ -104,18 +235,76 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": false
+            "selected": false,
+            "groups": [
+                "header"
+            ]
         },
         {
-            "type": "boolean",
-            "icon": "sicon-toggle-off",
-            "label": "عرض روابط الصفحات الهامة في الشريط العلوي",
-            "description": "مثل صفحة الهبوط ، المدونة ،الصفحات التعريفية",
-            "id": "important_links",
-            "format": "switch",
+            "id": "header_back_color_in_dark",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون الخلفية فى الوضع المظلم",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#1d1f1f",
             "required": false,
-            "value": true,
-            "selected": true
+            "groups": [
+                "header"
+            ],
+            "conditions": [
+                {
+                    "id": "topnav_is_dark",
+                    "operation": "=",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "id": "logo_in_dark",
+            "type": "string",
+            "format": "image",
+            "label": "صورة الشعار فى الوضع المظلم",
+            "description": "أفضل مقاس للصورة: 250*100 بكسل",
+            "labelHTML": null,
+            "placeholder": "e.g. https://hostname.com/image.png",
+            "icon": "sicon-image",
+            "value": null,
+            "required": false,
+            "groups": [
+                "header"
+            ],
+            "conditions": [
+                {
+                    "id": "topnav_is_dark",
+                    "operation": "=",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "id": "header_color_in_dark",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون العناصر فى الوضع المظلم",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#d6d6d7",
+            "required": false,
+            "groups": [
+                "header"
+            ],
+            "conditions": [
+                {
+                    "id": "topnav_is_dark",
+                    "operation": "=",
+                    "value": true
+                }
+            ]
         },
         {
             "type": "static",
