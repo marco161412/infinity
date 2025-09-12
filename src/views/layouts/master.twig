@@ -81,12 +81,66 @@
     
     <style>
         :root {
+            /*theme colors*/
             --font-main: '{{theme.font.name}}';
             --color-primary: {{ theme.color.primary }};
             --color-primary-dark: {{ theme.color.darker(0.15) }};
             --color-primary-light: {{ theme.color.lighter(0.15) }};
             --color-primary-reverse: {{ theme.color.reverse_text }};
-        }
+            --color-dark-primary: {{theme.settings.get('dark_primary_color') }};
+
+            /*header colors*/
+            --color-trans-header:                {{theme.settings.get('header_trans_color')}};
+            --color-back-header:                 {{theme.settings.get('header_back_color')}};
+            --color-text-header:                 {{theme.settings.get('header_color')}};
+            --color-input-back-header:           {{theme.settings.get('header_back_search_color')}};
+            --color-input-text-header:           {{theme.settings.get('header_text_search_color')}};
+            --color-dark-back-header:            {{theme.settings.get('header_back_color_in_dark')}};
+            --color-dark-color-header:           {{theme.settings.get('header_color_in_dark')}};
+            --color-dark-input-back-header:      {{theme.settings.get('header_back_search_color_in_dark')}};
+            --color-dark-input-text-header:      {{theme.settings.get('header_text_search_color_in_dark')}};
+            /*body colors*/
+            --color-dark-back-footer:            {{theme.settings.get('footer_back_color_in_dark')}};
+            --color-dark-color-footer:           {{theme.settings.get('footer_color_in_dark')}};
+            --pagination-color:                  {{theme.settings.get('pagination_color')}};
+            --color-background-body:             {{theme.settings.get('light_body_bacground')}};
+            --main-text-color:                   {{theme.settings.get('main_body_color')}};
+            --color-dark-background-body:        {{theme.settings.get('dark_body_bacground')}};
+            --main-dark-text-color:              {{theme.settings.get('dark_main_body_color')}};
+            /*card colors light*/
+            --card-box-shadow-color:             {{theme.settings.get('card_box_shadow_color')}};
+            --card-back-color:                   {{theme.settings.get('card_back_color')}};
+            --img-back-color:                    {{theme.settings.get('img_back_color')}};
+            --promotion-back-color:              {{theme.settings.get('promotion_back_color')}};
+            --promotion-title-color:             {{theme.settings.get('promotion_title_color')}};
+            --product-title-color:               {{theme.settings.get('product_title_color')}};
+            --product-subtitle-color:            {{theme.settings.get('product_subtitle_color')}};
+            --product-price-color:               {{theme.settings.get('product_price_color')}};
+            --product-discount-price-color:      {{theme.settings.get('product_discount_price_color')}};
+            --add-btn-back-color:                {{theme.settings.get('add_btn_back_color')}};
+            --add-btn-text-color:                {{theme.settings.get('add_btn_text_color')}};
+            --show-btn-back-color:               {{theme.settings.get('show_btn_back_color')}};
+            --show-btn-text-color:               {{theme.settings.get('show_btn_text_color')}};
+            --wishlist-btn-back-color:           {{theme.settings.get('wishlist_btn_back_color')}};
+            --wishlist-btn-text-color:           {{theme.settings.get('wishlist_btn_text_color')}};
+            /*card colors dark*/
+            --card-box-shadow-color-dark:        {{theme.settings.get('card_box_shadow_color_dark')}};
+            --card-back-color-dark:              {{theme.settings.get('card_back_color_dark')}};
+            --img-back-color-dark:               {{theme.settings.get('img_back_color_dark')}};
+            --promotion-back-color-dark:         {{theme.settings.get('promotion_back_color_dark')}};
+            --promotion-title-color-dark:        {{theme.settings.get('promotion_title_color_dark')}};
+            --product-title-color-dark:          {{theme.settings.get('product_title_color_dark')}};
+            --product-subtitle-color-dark:       {{theme.settings.get('product_subtitle_color_dark')}};
+            --product-price-color-dark:          {{theme.settings.get('product_price_color_dark')}};
+            --product-discount-price-color-dark: {{theme.settings.get('product_discount_price_color_dark')}};
+            --add-btn-back-color-dark:           {{theme.settings.get('add_btn_back_color_dark')}};
+            --add-btn-text-color-dark:           {{theme.settings.get('add_btn_text_color_dark')}};
+            --show-btn-back-color-dark:          {{theme.settings.get('show_btn_back_color_dark')}};
+            --show-btn-back-color-dark-hoverd:   {{theme.settings.get('show_btn_back_color_dark_hoverd')}};
+            --show-btn-text-color-dark:          {{theme.settings.get('show_btn_text_color_dark')}};
+            --wishlist-btn-back-color-dark:      {{theme.settings.get('wishlist_btn_back_color_dark')}};
+            --wishlist-btn-text-color-dark:      {{theme.settings.get('wishlist_btn_text_color_dark')}};
+        }   
     </style>
     {# tracking services, custom css feature. #}
     {% hook 'head:end' %}
