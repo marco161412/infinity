@@ -90,13 +90,18 @@
 @import './05-utilities/safari-fixes';
 @import './05-utilities/font-customization';
 
+@import './06-custom/global.scss';
+@import './06-custom/loader.scss';
+@import './06-custom/header.scss';
+@import './06-custom/footer.scss';
 @import './06-custom/cart.scss';
 @import './06-custom/category.scss';
-@import './06-custom/footer.scss';
-@import './06-custom/global.scss';
-@import './06-custom/header.scss';
+@import './06-custom/blog.scss';
+@import './06-custom/customer.scss';
+@import './06-custom/orders.scss';
+@import './06-custom/brands.scss';
 @import './06-custom/home-blocks.scss';
-@import './06-custom/product.scss';
+@import './06-custom/product-details.scss';
 
 
 
