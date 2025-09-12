@@ -85,7 +85,6 @@
             "value": "<h5 class='bg-primary flex items-center p-4 mb-8 text-white rounded-lg'><i class='sicon-archive-upload ml-3 text-secondary text-xl'></i>خيارات أعلى الصفحة</h5>",
             "variant": "h1",
             "icon": "sicon-format-size"
-            
         },
         {
             "type": "boolean",
@@ -104,7 +103,6 @@
             "value": true,
             "selected": false,
             "required": false
-            
         },
         {
             "id": "discount_img",
@@ -136,7 +134,6 @@
                     "value": true
                 }
             ]
-            
         },
         {
             "id": "header_is_sticky",
@@ -148,7 +145,6 @@
             "required": false,
             "value": true,
             "selected": true
-            
         },
         {
             "id": "cart_icon",
@@ -211,7 +207,6 @@
             "multichoice": false,
             "searchable": true,
             "required": false
-            
         },
         {
             "type": "boolean",
@@ -223,27 +218,63 @@
             "required": false,
             "value": true,
             "selected": false
-            
         },
         {
-            "id": "header_back_color_in_dark",
+            "id": "colors_header_title",
+            "type": "static",
+            "format": "description",
+            "label": "الالوان",
+            "value": "<h5 class=\"alert-box--danger flex items-center p-4 mb-8 text-white rounded-lg\"><i class=\"sicon-art-palette ml-3 text-secondary text-xl\"></i>الالوان</h5>",
+            "variant": "h1",
+            "icon": "sicon-art-palette"
+        },
+        {
+            "id": "header_back_color",
             "type": "string",
             "format": "color",
             "inputType": "color",
-            "label": "لون الخلفية فى الوضع المظلم",
+            "label": "لون الخلفية ",
             "description": null,
             "labelHTML": null,
             "icon": "sicon-format-fill",
-            "value": "#1d1f1f",
-            "required": false,
-            
-            "conditions": [
-                {
-                    "id": "topnav_is_dark",
-                    "operation": "=",
-                    "value": true
-                }
-            ]
+            "value": "#ffffff",
+            "required": false
+        },
+        {
+            "id": "header_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون العناصر ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#212121",
+            "required": false
+        },
+        {
+            "id": "header_back_search_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون خلفية حقل البحث ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#002F5B",
+            "required": false
+        },
+        {
+            "id": "header_text_search_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون نص حقل البحث ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#9ca3af",
+            "required": false
         },
         {
             "id": "logo_in_dark",
@@ -255,35 +286,66 @@
             "placeholder": "e.g. https://hostname.com/image.png",
             "icon": "sicon-image",
             "value": null,
-            "required": false,
-            
-            "conditions": [
-                {
-                    "id": "topnav_is_dark",
-                    "operation": "=",
-                    "value": true
-                }
-            ]
+            "required": false
+        },
+        {
+            "id": "header_back_color_in_dark",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون الخلفية ",
+            "description": "فى الوضع المظلم",
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#131415",
+            "required": false
         },
         {
             "id": "header_color_in_dark",
             "type": "string",
             "format": "color",
             "inputType": "color",
-            "label": "لون العناصر فى الوضع المظلم",
-            "description": null,
+            "label": "لون العناصر ",
+            "description": "فى الوضع المظلم",
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#d6d6d7",
+            "required": false
+        },
+        {
+            "id": "header_back_search_color_in_dark",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون خلفية حقل البحث ",
+            "description": "فى الوضع المظلم",
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#002f5b",
+            "required": false
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "خلفية حقل البحث شفافه",
+            "description": "فى الوضع المظلم",
+            "id": "search_header_is_transparent_in_dark",
+            "format": "switch",
             "required": false,
-            
-            "conditions": [
-                {
-                    "id": "topnav_is_dark",
-                    "operation": "=",
-                    "value": true
-                }
-            ]
+            "value": true,
+            "selected": false
+        },
+        {
+            "id": "header_text_search_color_in_dark",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون نص حقل البحث ",
+            "description": "فى الوضع المظلم",
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#B6D0F1",
+            "required": false
         },
         {
             "type": "static",

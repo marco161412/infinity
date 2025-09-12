@@ -26,7 +26,7 @@
                                 
                                 height: 3px;
                                 width: 100%;
-                                background: var(--color-black);
+                                background: var(--color-text-header);
                                 transition: 0.5s;
                             }
                             /* steps of 12 are optional, could also be 10, 13 etc */
@@ -825,10 +825,8 @@ body:has(.home){
                                 flex-direction: column;
                                 justify-content: space-around;
                                 .custom-line {
-                                    
                                     height: 3px;
                                     width: 100%;
-                                    background: var(--color-primary);
                                     transition: 0.5s;
                                 }
                                 /* steps of 12 are optional, could also be 10, 13 etc */
