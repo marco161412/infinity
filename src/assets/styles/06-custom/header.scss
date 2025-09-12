@@ -4,6 +4,7 @@
         padding-bottom: unset;
         height: fit-content!important;
         min-height: fit-content;
+        background-color: var(--color-back-header);
     }
     .main-nav-container{
         .inner{
@@ -58,11 +59,18 @@
                     align-items: center;
                     salla-search{
                         width: 100%;
+                        .s-search-input{
+                            background-color: var(--color-input-back-header);
+                            color: var(--color-input-text-header);
+                        }
                     }
                 }
                 .header-icons{
                     .header-btn{
                         margin-right: 10px;
+                        .header-btn__icon{
+                            color: var(--color-text-header) ;
+                        }
                     }
                     .header-btn.search{
                         display: none;
@@ -89,6 +97,11 @@
                 li{
                     a{
                         padding: 5px 10px;
+                        color: var(--color-text-header);
+                        &:hover{
+                            color: var(--color-text-header);
+                            opacity: 0.7;
+                        }
                     }
                     .sub-menu{
                         a{
@@ -666,13 +679,79 @@
                         }}
                 }
                 .header-search {
-                  input::placeholder{
-                    color: inherit;
-                  }  
-                  .s-search-results{
-                    background-color: inherit;
-                    color: inherit;
-                  }
+                    salla-search{
+                        svg{
+                                fill:var(--color-dark-input-text-header) ;
+                                opacity: 0.7;
+                            }
+                        .s-search-input{
+                            background-color: var(--color-dark-input-back-header);
+                            border: 1px solid;
+                            color: var(--color-dark-input-text-header);
+                            border-color: var(--color-dark-input-back-header);
+                            &::placeholder{
+                                color: var(--color-dark-input-text-header);
+                            }
+                        }
+                        .s-search-results{
+                            background-color: inherit;
+                            color: inherit;
+                            
+                            
+                            .s-search-product{
+                                &:first-of-type{
+                                     border-top: 1px solid var(--color-dark-input-text-header);
+                                }
+                               &:last-of-type{
+                                     border-color: transparent;
+                                }
+                                background-color: var(--color-dark-input-back-header); 
+                                 
+                                .s-search-product-title{
+                                        color:var(--color-dark-input-text-header);
+                                        
+                                    }
+                                    .s-search-product-price{
+                                        color: var(--main-dark-text-color);
+                                        .s-search-product-regular-price{
+                                            color: var(--main-dark-text-color);
+                                            opacity: 0.7;
+                                        }
+                                    }
+                            }
+                        }
+                        &.search-transparent{
+                            svg{
+                                fill:var(--color-dark-input-back-header) ;
+                            }
+                            .s-search-input{
+                                background-color: transparent;
+                                &::placeholder{
+                                    color: inherit;
+                                }
+                            }
+                            .s-search-results{
+                                background-color: var(--color-dark-back-header);
+                                color: inherit;
+                               
+                                .s-search-product{
+                                    .s-search-product-title{
+                                        color:var(--color-dark-input-text-header);
+                                        
+                                    }
+                                        border-color: var(--color-dark-input-text-header);
+                                        &:hover{
+                                            opacity: 0.9;
+                                        }
+                                        &:last-of-type{
+                                            border-color: transparent;
+                                        }
+                                }
+                            }
+                        }
+                    }
+                   
+                  
                 }
                 .header-icons{
                     .header-btn{
@@ -680,6 +759,7 @@
                         .header-btn__icon{
                             color: inherit;
                             background-color: inherit;
+                            border-color: var(--color-dark-input-back-header) ;
                             
                         }
                         .header-btn__icon::before{
@@ -698,6 +778,12 @@
                         background-color: inherit;
                         
                     }
+                    salla-cart-summary{
+                        .s-cart-summary-count{
+                            background-color:var(--color-dark-primary) ;
+                            color: var(--main-dark-text-color);
+                        }
+                    }
                 }
             }
             .bottom-navbar{
@@ -705,9 +791,11 @@
                     li{
                         a{
                             color: var(--color-dark-color-header);
+                            border-bottom: 2px solid transparent ;
                         }
                         a:hover{
-                            color: var(--color-primary);
+                            border-color: var(--color-dark-primary);
+                            opacity: 1;
                         }
                         .sub-menu{
                             border-top: 0;
@@ -727,6 +815,7 @@
     outline: var(--color-dark-color-header) ;
   }
 }
+
 body:has(.home){
     .store-header:not(:has(.fixed-header)){
         .transparent-header{

@@ -23060,6 +23060,7 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
   padding-bottom: initial;
   min-height: -moz-fit-content;
   min-height: fit-content;
+  background-color: var(--color-back-header);
 }
 .store-header .main-nav-container .inner {
   width: 100%;
@@ -23106,8 +23107,15 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
 .store-header .main-nav-container .inner .header-nav .header-search salla-search {
   width: 100%;
 }
+.store-header .main-nav-container .inner .header-nav .header-search salla-search .s-search-input {
+  background-color: var(--color-input-back-header);
+  color: var(--color-input-text-header);
+}
 .store-header .main-nav-container .inner .header-nav .header-icons .header-btn {
   margin-right: 10px;
+}
+.store-header .main-nav-container .inner .header-nav .header-icons .header-btn .header-btn__icon {
+  color: var(--color-text-header);
 }
 .store-header .main-nav-container .inner .header-nav .header-icons .header-btn.search {
   display: none;
@@ -23128,6 +23136,11 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
 }
 .store-header .main-nav-container .inner #bigMenu.main-menu li a {
   padding: 5px 10px;
+  color: var(--color-text-header);
+}
+.store-header .main-nav-container .inner #bigMenu.main-menu li a:hover {
+  color: var(--color-text-header);
+  opacity: 0.7;
 }
 .store-header .main-nav-container .inner #bigMenu.main-menu li .sub-menu a {
   padding-bottom: 10px;
@@ -23628,15 +23641,72 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
 .topnav-is-dark .store-header .top-navbar .inner .header-nav .header-logo-links .side-menu-bar-icon .menu-line-zigzag .custom-line {
   background-color: var(--color-dark-color-header);
 }
-.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search input::-moz-placeholder {
-  color: inherit;
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search svg {
+  fill: var(--color-dark-input-text-header);
+  opacity: 0.7;
 }
-.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search input::placeholder {
-  color: inherit;
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search .s-search-input {
+  background-color: var(--color-dark-input-back-header);
+  border: 1px solid;
+  color: var(--color-dark-input-text-header);
+  border-color: var(--color-dark-input-back-header);
 }
-.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search .s-search-results {
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search .s-search-input::-moz-placeholder {
+  color: var(--color-dark-input-text-header);
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search .s-search-input::placeholder {
+  color: var(--color-dark-input-text-header);
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search .s-search-results {
   background-color: inherit;
   color: inherit;
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search .s-search-results .s-search-product:first-of-type {
+  border-top: 1px solid var(--color-dark-input-text-header);
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search .s-search-results .s-search-product:last-of-type {
+  border-color: transparent;
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search .s-search-results .s-search-product {
+  background-color: var(--color-dark-input-back-header);
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search .s-search-results .s-search-product .s-search-product-title {
+  color: var(--color-dark-input-text-header);
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search .s-search-results .s-search-product .s-search-product-price {
+  color: var(--main-dark-text-color);
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search .s-search-results .s-search-product .s-search-product-price .s-search-product-regular-price {
+  color: var(--main-dark-text-color);
+  opacity: 0.7;
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search.search-transparent svg {
+  fill: var(--color-dark-input-back-header);
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search.search-transparent .s-search-input {
+  background-color: transparent;
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search.search-transparent .s-search-input::-moz-placeholder {
+  color: inherit;
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search.search-transparent .s-search-input::placeholder {
+  color: inherit;
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search.search-transparent .s-search-results {
+  background-color: var(--color-dark-back-header);
+  color: inherit;
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search.search-transparent .s-search-results .s-search-product .s-search-product-title {
+  color: var(--color-dark-input-text-header);
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search.search-transparent .s-search-results .s-search-product {
+  border-color: var(--color-dark-input-text-header);
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search.search-transparent .s-search-results .s-search-product:hover {
+  opacity: 0.9;
+}
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-search salla-search.search-transparent .s-search-results .s-search-product:last-of-type {
+  border-color: transparent;
 }
 .topnav-is-dark .store-header .top-navbar .inner .header-nav .header-icons .header-btn {
   outline: inherit;
@@ -23644,6 +23714,7 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
 .topnav-is-dark .store-header .top-navbar .inner .header-nav .header-icons .header-btn .header-btn__icon {
   color: inherit;
   background-color: inherit;
+  border-color: var(--color-dark-input-back-header);
 }
 .topnav-is-dark .store-header .top-navbar .inner .header-nav .header-icons .header-btn .header-btn__icon::before {
   color: inherit;
@@ -23658,12 +23729,17 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
   color: inherit;
   background-color: inherit;
 }
+.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-icons salla-cart-summary .s-cart-summary-count {
+  background-color: var(--color-dark-primary);
+  color: var(--main-dark-text-color);
+}
 .topnav-is-dark .store-header .top-navbar .inner .bottom-navbar #bigMenu.main-menu li a {
   color: var(--color-dark-color-header);
+  border-bottom: 2px solid transparent;
 }
 .topnav-is-dark .store-header .top-navbar .inner .bottom-navbar #bigMenu.main-menu li a:hover {
-  color: #414042;
-  color: var(--color-primary);
+  border-color: var(--color-dark-primary);
+  opacity: 1;
 }
 .topnav-is-dark .store-header .top-navbar .inner .bottom-navbar #bigMenu.main-menu li .sub-menu {
   border-top: 0;
