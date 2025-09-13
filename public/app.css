@@ -23128,6 +23128,25 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
 .store-header .main-nav-container .inner .header-nav .header-icons .header-btn .header-btn__icon {
   color: var(--color-text-header);
 }
+.store-header .main-nav-container .inner .header-nav .header-icons .header-btn.transparent {
+  background-color: transparent;
+}
+.store-header .main-nav-container .inner .header-nav .header-icons .header-btn.transparent .header-btn__icon {
+  color: var(--color-text-header);
+}
+.store-header .main-nav-container .inner .header-nav .header-icons .header-btn.circle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(198,199,206,0.10196);
+  background-color: var(--bg-gray);
+}
+.store-header .main-nav-container .inner .header-nav .header-icons .header-btn.circle .header-btn__icon {
+  color: var(--color-text-header);
+}
 .store-header .main-nav-container .inner .header-nav .header-icons .salla-cart-summary {
   margin-right: 10px;
 }

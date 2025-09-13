@@ -12,7 +12,8 @@
 {% set lang_and_currency_in_header  = theme.settings.get('lang_and_currency_in_header') %}
 {% set cart_in_header       		= theme.settings.get('cart_in_header') %}
 {% set login_and_profile_in_header  = theme.settings.get('login_and_profile_in_header') %}
-{% set icon_is_circle 				= theme.settings.get('icon_is_circle') %}
+{% set icon_back_transparent        = theme.settings.get('icon_back_transparent') %}
+{% set icon_is_circle               = theme.settings.get('icon_is_circle') %}
 {% set hide_settings       			= theme.settings.get('hide_settings') %}
 {% set navbar              			= theme.settings.get('navbar') %}
 <header class="store-header">
@@ -74,7 +75,7 @@
 					<div class="header-icons flex items-center justify-end">
 						{% if search_in_header %}
 							{% if logo_in_center or ( not logo_in_center and not search_in_center) %}
-								<button onclick="salla.event.dispatch('search::open')" class="header-btn search">
+								<button onclick="salla.event.dispatch('search::open')" class="header-btn search {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
 									<i class="header-btn__icon sicon-search"></i>
 								</button>
 							{% endif %}
@@ -82,7 +83,7 @@
 						{% if store.settings.is_multilingual or store.settings.currencies_enabled %}
 
 							{% if lang_and_currency_in_header %}
-								<button type="button" onclick="salla.event.dispatch('localization::open')" class="header-btn">
+								<button type="button"  onclick="salla.event.dispatch('localization::open')" class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
 									<i class="header-btn__icon sicon-earth"></i>
 								</button>
 							{% endif %}
@@ -91,25 +92,25 @@
 						{% endif %}
 						{% if login_and_profile_in_header %}
 							{% if user.type=='user' %}
-								<salla-user-menu avatar-only show-header></salla-user-menu>
+								<salla-user-menu avatar-only show-header class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}"></salla-user-menu>
 							{% else %}
-								<button class="header-btn" aria-label="user-icon" onclick="salla.event.dispatch('login::open')">
+								<button class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}" aria-label="user-icon" onclick="salla.event.dispatch('login::open')">
 									<i class="header-btn__icon sicon-user-circle"></i>
 								</button>
 							{% endif %}
 						{% endif %}
 						{% if cart_in_header %}
-							<salla-cart-summary class="ml-4 rtl:ml-[unset] salla-cart-summary header-btn">
+							<salla-cart-summary class="ml-4 rtl:ml-[unset] salla-cart-summary header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
 								<i slot="icon" class="header-btn__icon icon {{theme.settings.get('cart_icon')}}"></i>
 							</salla-cart-summary>
 						{% endif %}
 						{# Scopes | Branches #}
-						{% if store.scope %}
-							<button class="btn--rounded-gray"
+						{# {% if store.scope %} #}
+							<button class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}"
 									onclick="salla.event.dispatch('scopes::open', {'mode': 'default'})">
-								<i class="sicon-location rtl:ml-1 ltr:mr-1"></i> {{ store.scope.name }}
+								<i class="sicon-location header-btn__icon rtl:ml-1 ltr:mr-1"></i> {{ store.scope.name }}
 							</button>
-						{% endif %}
+						{# {% endif %} #}
 					</div>
 				</div>
 				{% if navbar %}

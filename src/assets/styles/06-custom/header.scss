@@ -82,6 +82,25 @@
                         .header-btn__icon{
                             color: var(--color-text-header) ;
                         }
+                        &.transparent{
+                            background-color: transparent;
+                            .header-btn__icon{
+                                color: var(--color-text-header) ;
+                            }
+                        
+                        }
+                        &.circle{
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            background-color: var(--bg-gray);
+                            .header-btn__icon{
+                                color: var(--color-text-header) ;
+                            }
+                        }
                     }
                     // .header-btn.search{
                     //     display: none;
