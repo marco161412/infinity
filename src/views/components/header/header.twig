@@ -71,6 +71,11 @@
 					
 					<div class="header-icons flex items-center justify-end">
 						{% if search_in_header %}
+							{% if logo_in_center %}
+								<button onclick="salla.event.dispatch('search::open')" class="header-btn search">
+									<i class="header-btn__icon sicon-search"></i>
+								</button>
+							{% endif %}
 							{% if logo_in_center or ( not logo_in_center and not search_in_center) %}
 								<button onclick="salla.event.dispatch('search::open')" class="header-btn search">
 									<i class="header-btn__icon sicon-search"></i>
