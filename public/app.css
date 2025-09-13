@@ -23126,26 +23126,20 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
   margin-right: 10px;
 }
 .store-header .main-nav-container .inner .header-nav .header-icons .header-btn .header-btn__icon {
-  color: var(--color-text-header);
-}
-.store-header .main-nav-container .inner .header-nav .header-icons .header-btn.transparent {
-  background-color: transparent;
+  background-color: var(--icons-back-color);
+  color: var(--icons-color);
+  border-radius: 10px;
 }
 .store-header .main-nav-container .inner .header-nav .header-icons .header-btn.transparent .header-btn__icon {
-  color: var(--color-text-header);
+  background-color: transparent;
 }
 .store-header .main-nav-container .inner .header-nav .header-icons .header-btn.circle {
-  width: 40px;
-  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background-color: rgba(198,199,206,0.10196);
-  background-color: var(--bg-gray);
 }
 .store-header .main-nav-container .inner .header-nav .header-icons .header-btn.circle .header-btn__icon {
-  color: var(--color-text-header);
+  border-radius: 50%;
 }
 .store-header .main-nav-container .inner .header-nav .header-icons .salla-cart-summary {
   margin-right: 10px;
@@ -23736,25 +23730,20 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
   border-color: transparent;
 }
 .topnav-is-dark .store-header .top-navbar .inner .header-nav .header-icons .header-btn {
-  outline: inherit;
+  margin-right: 10px;
 }
 .topnav-is-dark .store-header .top-navbar .inner .header-nav .header-icons .header-btn .header-btn__icon {
-  color: inherit;
-  background-color: inherit;
-  border-color: var(--color-dark-input-back-header);
+  background-color: var(--icons-dark-back-color);
+  color: var(--icons-dark-color);
 }
 .topnav-is-dark .store-header .top-navbar .inner .header-nav .header-icons .header-btn .header-btn__icon::before {
-  color: inherit;
+  color: var(--icons-dark-color);
 }
 .topnav-is-dark .store-header .top-navbar .inner .header-nav .header-icons a {
   color: inherit;
 }
 .topnav-is-dark .store-header .top-navbar .inner .header-nav .header-icons a:hover {
   opacity: 0.8;
-}
-.topnav-is-dark .store-header .top-navbar .inner .header-nav .header-icons .header-btn__icon {
-  color: inherit;
-  background-color: inherit;
 }
 .topnav-is-dark .store-header .top-navbar .inner .header-nav .header-icons salla-cart-summary .s-cart-summary-count {
   background-color: var(--color-dark-primary);

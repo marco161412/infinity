@@ -79,14 +79,15 @@
                     width: 100%;
                     .header-btn{
                         margin-right: 10px;
-                        background-color: var(--icons-back-color);
+                        
                         .header-btn__icon{
+                            background-color: var(--icons-back-color);
                             color: var(--icons-color) ;
+                            border-radius: 10px;
                         }
                         &.transparent{
-                            background-color: transparent;
                             .header-btn__icon{
-                                color: var(--icons-color) ;
+                                background-color: transparent;
                             }
                         
                         }
@@ -94,10 +95,8 @@
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            border-radius: 50%;
-                            
                             .header-btn__icon{
-                                color: var(--icons-color) ;
+                                border-radius: 50%;
                             }
                         }
                     }
@@ -784,29 +783,25 @@
                 }
                 .header-icons{
                     .header-btn{
-                        outline: inherit;
+                        margin-right: 10px;
+                        
                         .header-btn__icon{
-                            color: inherit;
-                            background-color: inherit;
-                            border-color: var(--color-dark-input-back-header) ;
-                            
-                        }
-                        .header-btn__icon::before{
-                            color:inherit;
+                            background-color: var(--icons-dark-back-color);
+                            color: var(--icons-dark-color) ;
+                            &::before{
+                                color:var(--icons-dark-color);
+                            }
                         }
                         
+                        
                     }
+                    
                     a{
                         color: inherit;
                         &:hover{
                             opacity: 0.8;
                         }
-                    }
-                    .header-btn__icon{
-                        color: inherit;
-                        background-color: inherit;
-                        
-                    }
+                    }                
                     salla-cart-summary{
                         .s-cart-summary-count{
                             background-color:var(--color-dark-primary) ;

@@ -51,16 +51,16 @@
 						{% if  search_in_header %}
 							{% if not logo_in_center and search_in_center %}
 								<div class="header-search ">
-									<salla-search inline oval class="{{theme.settings.get('search_header_is_transparent_in_dark') ? "search-transparent"}}" height="36"></salla-search>
+									<salla-search inline oval title="شريط البحث" class="{{theme.settings.get('search_header_is_transparent_in_dark') ? "search-transparent"}}" height="36"></salla-search>
 								</div>
 							{% endif %}
 						{% endif %}
 						{% if logo_in_center %}
 							<a class="navbar-brand center-logo" href="{{ store.url }}">
 								{% if theme.settings.get('topnav_is_dark') and theme.settings.get('logo_in_dark') %}
-									<img fetchpriority="high" width="100%" height="100%" class="dark" loading="eager" src="{{ theme.settings.get('logo_in_dark') }}" alt="{{ store.name }} logo">
+									<img fetchpriority="high" width="100%" height="100%" class="dark" loading="eager" title="شعار متجر {{ store.name }}" src="{{ theme.settings.get('logo_in_dark') }}" alt="{{ store.name }} logo">
 								{% else %}
-									<img fetchpriority="high" width="100%" height="100%" class="light" loading="eager" src="{{ store.logo }}" alt="{{ store.name }} logo">
+									<img fetchpriority="high" width="100%" height="100%" class="light" loading="eager" src="{{ store.logo }}" title="شعار متجر {{ store.name }}" alt="{{ store.name }} logo">
 								{% endif %}
 
 								{% if is_page('index') %}
@@ -75,7 +75,7 @@
 					<div class="header-icons flex items-center justify-end">
 						{% if search_in_header %}
 							{% if logo_in_center or ( not logo_in_center and not search_in_center) %}
-								<button onclick="salla.event.dispatch('search::open')" class="header-btn search {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
+								<button onclick="salla.event.dispatch('search::open')" title="زر البحث" class="header-btn search {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
 									<i class="header-btn__icon sicon-search"></i>
 								</button>
 							{% endif %}
@@ -83,7 +83,7 @@
 						{% if store.settings.is_multilingual or store.settings.currencies_enabled %}
 
 							{% if lang_and_currency_in_header %}
-								<button type="button"  onclick="salla.event.dispatch('localization::open')" class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
+								<button type="button" title="زر اللغة والعملة" onclick="salla.event.dispatch('localization::open')" class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
 									<i class="header-btn__icon sicon-earth"></i>
 								</button>
 							{% endif %}
@@ -92,21 +92,21 @@
 						{% endif %}
 						{% if login_and_profile_in_header %}
 							{% if user.type=='user' %}
-								<salla-user-menu avatar-only show-header class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}"></salla-user-menu>
+								<salla-user-menu avatar-only show-header title="صورة الشخصية" class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}"></salla-user-menu>
 							{% else %}
-								<button class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}" aria-label="user-icon" onclick="salla.event.dispatch('login::open')">
-									<i class="header-btn__icon sicon-user-circle"></i>
+								<button title="زر تسجل الدخول" class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}" aria-label="user-icon" onclick="salla.event.dispatch('login::open')">
+									<i class="header-btn__icon sicon-user-circle" ></i>
 								</button>
 							{% endif %}
 						{% endif %}
 						{% if cart_in_header %}
-							<salla-cart-summary class="ml-4 rtl:ml-[unset] salla-cart-summary header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
+							<salla-cart-summary title="زر سلة المنتجات" class="ml-4 rtl:ml-[unset] salla-cart-summary header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
 								<i slot="icon" class="header-btn__icon icon {{theme.settings.get('cart_icon')}}"></i>
 							</salla-cart-summary>
 						{% endif %}
 						{# Scopes | Branches #}
 						{# {% if store.scope %} #}
-							<button class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}"
+							<button title="زر الفروع" class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}"
 									onclick="salla.event.dispatch('scopes::open', {'mode': 'default'})">
 								<i class="sicon-location header-btn__icon rtl:ml-1 ltr:mr-1"></i> {{ store.scope.name }}
 							</button>
