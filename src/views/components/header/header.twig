@@ -45,10 +45,12 @@
 
 					</div>
 					<div class="in-center">
-						{% if not logo_in_center and search_in_center %}
-							<div class="header-search ">
-								<salla-search inline oval class="{{theme.settings.get('search_header_is_transparent_in_dark') ? "search-transparent"}}" height="36"></salla-search>
-							</div>
+						{% if  search_in_header %}
+							{% if not logo_in_center and search_in_center %}
+								<div class="header-search ">
+									<salla-search inline oval class="{{theme.settings.get('search_header_is_transparent_in_dark') ? "search-transparent"}}" height="36"></salla-search>
+								</div>
+							{% endif %}
 						{% endif %}
 						{% if logo_in_center %}
 							<a class="navbar-brand center-logo" href="{{ store.url }}">
@@ -68,10 +70,12 @@
 					</div>
 					
 					<div class="header-icons flex items-center justify-end">
-						{% if not logo_in_center  %}
-							<button onclick="salla.event.dispatch('search::open')" class="header-btn search">
-								<i class="header-btn__icon sicon-search"></i>
-							</button>
+						{% if search_in_header %}
+							{% if logo_in_center or ( not logo_in_center and not search_in_center) %}
+								<button onclick="salla.event.dispatch('search::open')" class="header-btn search">
+									<i class="header-btn__icon sicon-search"></i>
+								</button>
+							{% endif %}
 						{% endif %}
 						{% if store.settings.is_multilingual or store.settings.currencies_enabled %}
 							<button type="button" onclick="salla.event.dispatch('localization::open')" class="header-btn">

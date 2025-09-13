@@ -155,7 +155,7 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true
+             "selected": true
         },
         {
             "id": "search_in_header",
@@ -177,7 +177,8 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true,"conditions": [
+            "selected": true,
+            "conditions": [
                 {
                     "id": "search_in_header",
                     "operation": "=",
