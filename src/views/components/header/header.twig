@@ -5,9 +5,14 @@
 | cart.items_count | int     |                                 |
 | cart.total       | string  | Formatted total ex: "١٠٠ ر.س"   |
 #}
-{% set important_links = theme.settings.get('important_links') %}
-{% set hide_settings = theme.settings.get('hide_settings') %}
-{% set navbar = theme.settings.get('navbar') %}
+{% set important_links     			= theme.settings.get('important_links') %}
+{% set logo_in_center      			= theme.settings.get('logo_in_center') %}
+{% set search_in_center    			= theme.settings.get('search_in_center') %}
+{% set lang_and_currency_in_header  = theme.settings.get('lang_and_currency_in_header') %}
+{% set cart_in_header       		= theme.settings.get('cart_in_header') %}
+{% set login_and_profile_in_header  = theme.settings.get('login_and_profile_in_header') %}
+{% set hide_settings       			= theme.settings.get('hide_settings') %}
+{% set navbar              			= theme.settings.get('navbar') %}
 <header class="store-header">
 		<div id="mainnav" class="top-navbar main-nav-container shadow-default bg-white {{theme.settings.get('transparent_header')?'transparent-header':''}}"> <div class="inner bg-inherit">
 			<div class="container-sec">
@@ -22,25 +27,46 @@
 							</div>
 						</a>
 
-						<a class="navbar-brand" href="{{ store.url }}">
-							{% if theme.settings.get('topnav_is_dark') and theme.settings.get('logo_in_dark') %}
-							<img fetchpriority="high" width="100%" height="100%" class="dark" loading="eager" src="{{ theme.settings.get('logo_in_dark') }}" alt="{{ store.name }} logo">
-							{% else %}
-							<img fetchpriority="high" width="100%" height="100%" class="light"  loading="eager" src="{{ store.logo }}" alt="{{ store.name }} logo">
-							{% endif %}
+						{% if not logo_in_center %}
+							<a class="navbar-brand" href="{{ store.url }}">
+								{% if theme.settings.get('topnav_is_dark') and theme.settings.get('logo_in_dark') %}
+								<img fetchpriority="high" width="100%" height="100%" class="dark" loading="eager" src="{{ theme.settings.get('logo_in_dark') }}" alt="{{ store.name }} logo">
+								{% else %}
+								<img fetchpriority="high" width="100%" height="100%" class="light"  loading="eager" src="{{ store.logo }}" alt="{{ store.name }} logo">
+								{% endif %}
 
-							{% if is_page('index') %}
-								<h1 class="sr-only">{{ store.name }}</h1>
-							{% else %}
-								<h2 class="sr-only">{{ store.name }}</h2>
-							{% endif %}
-						</a>
-
+								{% if is_page('index') %}
+									<h1 class="sr-only">{{ store.name }}</h1>
+								{% else %}
+									<h2 class="sr-only">{{ store.name }}</h2>
+								{% endif %}
+							</a>
+						{% endif %}
 
 					</div>
-					<div class="header-search ">
-						<salla-search inline oval class="{{theme.settings.get('search_header_is_transparent_in_dark')?"search-transparent"}}" height="36"></salla-search>
+					<div class="in-center">
+						{% if not logo_in_center and search_in_center %}
+							<div class="header-search ">
+								<salla-search inline oval class="{{theme.settings.get('search_header_is_transparent_in_dark') ? "search-transparent"}}" height="36"></salla-search>
+							</div>
+						{% endif %}
+						{% if logo_in_center %}
+							<a class="navbar-brand center-logo" href="{{ store.url }}">
+								{% if theme.settings.get('topnav_is_dark') and theme.settings.get('logo_in_dark') %}
+									<img fetchpriority="high" width="100%" height="100%" class="dark" loading="eager" src="{{ theme.settings.get('logo_in_dark') }}" alt="{{ store.name }} logo">
+								{% else %}
+									<img fetchpriority="high" width="100%" height="100%" class="light" loading="eager" src="{{ store.logo }}" alt="{{ store.name }} logo">
+								{% endif %}
+
+								{% if is_page('index') %}
+									<h1 class="sr-only">{{ store.name }}</h1>
+								{% else %}
+									<h2 class="sr-only">{{ store.name }}</h2>
+								{% endif %}
+							</a>
+						{% endif %}
 					</div>
+					
 					<div class="header-icons flex items-center justify-end">
 						<button onclick="salla.event.dispatch('search::open')" class="header-btn search">
 							<i class="header-btn__icon sicon-search"></i>

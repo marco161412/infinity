@@ -52,19 +52,28 @@
                     
                     
                 }
-                .header-search{
-                    max-width: 500px;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    salla-search{
+                .in-center{
+                   display: flex; 
+                   flex:1;
+                   max-width: 500px;
+                   width: 100%;
+                   justify-content: center;
+                   align-items: center;
+                    .header-search{
+                        max-width: 500px;
                         width: 100%;
-                        .s-search-input{
-                            background-color: var(--color-input-back-header);
-                            color: var(--color-input-text-header);
+                        display: flex;
+                        align-items: center;
+                        salla-search{
+                            width: 100%;
+                            .s-search-input{
+                                background-color: var(--color-input-back-header);
+                                color: var(--color-input-text-header);
+                            }
                         }
                     }
                 }
+               
                 .header-icons{
                     .header-btn{
                         margin-right: 10px;

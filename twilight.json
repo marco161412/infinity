@@ -169,17 +169,6 @@
             "selected": true
         },
         {
-            "id": "search_in_center",
-            "label": "البحث فى المنتصف",
-            "description": null,
-            "type": "boolean",
-            "icon": "sicon-toggle-off",
-            "format": "switch",
-            "required": false,
-            "value": true,
-            "selected": true
-        },
-        {
             "id": "lang_and_currency_in_header",
             "label": "إظهار خيارات اللغة والعملة في رأس الصفحة",
             "description": "عند تفعيل هذا الخيار ستظهر أزرار تغيير اللغة والعملة في أعلى الصفحة بجانب الإعدادات الأساسية.",
@@ -194,6 +183,17 @@
             "id": "cart_in_header",
             "label": "إظهار زر السلة في رأس الصفحة",
             "description": "عند تفعيل هذا الخيار سيظهر زر السلة في رأس الصفحة بجانب الإعدادات الأساسية.",
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": true
+        },
+        {
+            "id": "login_and_profile_in_header",
+            "label": "إظهار زر تسجيل الدخول والملف الشخصي في رأس الصفحة",
+            "description": "عند تفعيل هذا الخيار سيظهر زر تسجيل الدخول والملف الشخصي في رأس الصفحة بجانب الإعدادات الأساسية.",
             "type": "boolean",
             "icon": "sicon-toggle-off",
             "format": "switch",
