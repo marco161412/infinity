@@ -158,15 +158,32 @@
             "selected": true
         },
         {
-            "id": "search_in_center",
-            "label": "البحث فى المنتصف",
-            "description": null,
+            "id": "search_in_header",
+            "label": "إظهار البحث في رأس الصفحة",
+            "description": "عند تفعيل هذا الخيار سيظهر البحث في رأس الصفحة بجانب الإعدادات الأساسية.",
             "type": "boolean",
             "icon": "sicon-toggle-off",
             "format": "switch",
             "required": false,
             "value": true,
             "selected": true
+        },
+        {
+            "id": "search_in_center",
+            "label": "البحث فى المنتصف",
+            "description": "فى حالة تفعيلها سيظهر شريط البحث فى المنتسف ولو الغيت سيتم وضع ايقونة البحث فى راس الصفحة",
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": true,"conditions": [
+                {
+                    "id": "search_in_header",
+                    "operation": "=",
+                    "value": true
+                }
+            ]
         },
         {
             "id": "lang_and_currency_in_header",
@@ -179,6 +196,7 @@
             "value": true,
             "selected": true
         },
+       
         {
             "id": "cart_in_header",
             "label": "إظهار زر السلة في رأس الصفحة",

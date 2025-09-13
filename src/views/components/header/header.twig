@@ -68,9 +68,11 @@
 					</div>
 					
 					<div class="header-icons flex items-center justify-end">
-						<button onclick="salla.event.dispatch('search::open')" class="header-btn search">
-							<i class="header-btn__icon sicon-search"></i>
-						</button>
+						{% if not logo_in_center  %}
+							<button onclick="salla.event.dispatch('search::open')" class="header-btn search">
+								<i class="header-btn__icon sicon-search"></i>
+							</button>
+						{% endif %}
 						{% if store.settings.is_multilingual or store.settings.currencies_enabled %}
 							<button type="button" onclick="salla.event.dispatch('localization::open')" class="header-btn">
 								<i class="header-btn__icon sicon-earth"></i>

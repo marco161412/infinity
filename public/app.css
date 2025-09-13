@@ -23122,9 +23122,6 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
 .store-header .main-nav-container .inner .header-nav .header-icons .header-btn .header-btn__icon {
   color: var(--color-text-header);
 }
-.store-header .main-nav-container .inner .header-nav .header-icons .header-btn.search {
-  display: none;
-}
 .store-header .main-nav-container .inner .header-nav .header-icons .salla-cart-summary {
   margin-right: 10px;
 }
