@@ -23065,6 +23065,9 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
   height: fit-content;
   padding: 10px 0;
 }
+.store-header .main-nav-container .inner .header-nav .header-logo-links {
+  width: 100%;
+}
 .store-header .main-nav-container .inner .header-nav .header-logo-links .side-menu-bar-icon .menu-line-zigzag {
   display: flex;
   width: 20px;
@@ -23115,6 +23118,9 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
 .store-header .main-nav-container .inner .header-nav .in-center .header-search salla-search .s-search-input {
   background-color: var(--color-input-back-header);
   color: var(--color-input-text-header);
+}
+.store-header .main-nav-container .inner .header-nav .header-icons {
+  width: 100%;
 }
 .store-header .main-nav-container .inner .header-nav .header-icons .header-btn {
   margin-right: 10px;

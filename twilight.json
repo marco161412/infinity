@@ -351,6 +351,47 @@
             "required": false
         },
         {
+            "id": "icons_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون الايقونات ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#9ca3af",
+            "required": false
+        },
+        {
+            "id": "icons_border_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون حواف الايقونات ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#9ca3af",
+            "required": false
+        },
+        {
+            "id": "icons_back_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون خلفية الايقونات ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#9ca3af",
+            "required": false
+        },
+        {
+            "type": "static",
+            "id": "static-line_in_dark",
+            "format": "line"
+        },
+        {
             "id": "logo_in_dark",
             "type": "string",
             "format": "image",
@@ -419,6 +460,41 @@
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#B6D0F1",
+            "required": false
+        },{
+            "id": "icons_color_in_dark",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون الايقونات ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#9ca3af",
+            "required": false
+        },
+        {
+            "id": "icons_border_color_in_dark",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون حواف الايقونات ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#9ca3af",
+            "required": false
+        },
+        {
+            "id": "icons_back_color_in_dark",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون خلفية الايقونات ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#9ca3af",
             "required": false
         },
         {
