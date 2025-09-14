@@ -302,3 +302,33 @@ isElementLoaded(selector){
 }
 
 salla.onReady(() => (new App).loadTheApp());
+/****************** header */
+  function closeSettings() {
+            document.getElementById('settingsSidebar').classList.remove('active');
+            document.getElementById('overlay').classList.remove('active');
+        }
+        function openSettings() {
+            document.getElementById('settingsSidebar').classList.add('active');
+            document.getElementById('overlay').classList.add('active');
+        }
+         function detectSystemTheme() {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.getElementById('dark-mode').checked = true;
+                changeTheme('dark');
+            }
+        }
+
+        // استماع لتغيير السمة في النظام
+        if (window.matchMedia) {
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+                if (!localStorage.getItem('theme')) {
+                    if (e.matches) {
+                        document.getElementById('dark-mode').checked = true;
+                        changeTheme('dark');
+                    } else {
+                        document.getElementById('light-mode').checked = true;
+                        changeTheme('light');
+                    }
+                }
+            });
+        }
