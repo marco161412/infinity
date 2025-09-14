@@ -18,7 +18,7 @@
 {% set navbar              			= theme.settings.get('navbar') %}
 <header class="store-header">
 		<div id="mainnav" class="top-navbar main-nav-container shadow-default bg-white {{theme.settings.get('transparent_header')?'transparent-header':''}}"> <div class="inner bg-inherit">
-			<div class="container-sec">
+			<div class="container-sec inner">
 				<div class="header-nav flex items-stretch justify-between relative ">
 					<div class="header-logo-links flex items-center">
 						<a class="side-menu-bar-icon  mburger mburger--collapse leading-none rtl:ml-4 ltr:mr-4" href="#mobile-menu" aria-label="Open-menu">
@@ -105,12 +105,12 @@
 							</salla-cart-summary>
 						{% endif %}
 						{# Scopes | Branches #}
-						{# {% if store.scope %} #}
+						{% if store.scope %}
 							<button title="زر الفروع" class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}"
 									onclick="salla.event.dispatch('scopes::open', {'mode': 'default'})">
 								<i class="sicon-location header-btn__icon rtl:ml-1 ltr:mr-1"></i> {{ store.scope.name }}
 							</button>
-						{# {% endif %} #}
+						{% endif %}
 					</div>
 				</div>
 				{% if navbar %}
@@ -119,10 +119,72 @@
 						<div id="bigMenu" class="main-menu"></div>
 					</div>
 				{% endif %}
+				{% if hide_settings == false %}
+					<div class="system-setting-sidebar ">
+						<h3 class="header-sidebar">
+							<i class="sicon-settings"></i>
+							{{ trans('custom.setting') }}
+							<i class="sicon-cancel cancel-btn"></i>
+						</h3>
+						<ul class="content-sidebar">
+							<li class="language_currency">
+								<h4>
+									<i class="sicon-earth"></i>
+									{{ trans('custom.Language_currency') }}
+								</h4>
+
+								<p class="p">{{ user.language.name }}<em class="mx-1.5">|</em>
+									{{ currency.code == "SAR" ? "<i class='sicon-sar'></i>"|raw : currency.symbol }}</p>
+
+								<button type="button" onclick="salla.event.dispatch('localization::open')" class="btn--rounded-gray basis-0">
+									{{ trans('custom.change') }}
+								</button>
+							</li>
+							<li>
+								<h4>
+									<i class="sicon-art-palette"></i>
+									{{ trans('custom.store_appearance') }}
+								</h4>
+								<p class="p">{{ trans('custom.choose_mode') }}</p>
+								<div class="flex-content">
+									<div class="toggle-mode"><input type="radio" id="light-mode" name="system-mode" checked=""><label for="light-mode"><img src="https://codlop.sa/salla_media/10.png" alt=""><span>{{ trans('custom.light_mode') }}</span>
+										</label>
+									</div>
+									<div class="toggle-mode"><input type="radio" id="dark-mode" name="system-mode"><label for="dark-mode"><img src="https://codlop.sa/salla_media/11.png" alt=""><span>{{ trans('custom.dark_mode') }}</span>
+										</label>
+									</div>
+								</div>
+							</li> 
+							<li>
+								<h4>
+									<i class="sicon-format-text"></i>
+									{{ trans('custom.text_size') }}
+								</h4>
+								<p class="p">{{ trans('custom.choose_size') }}</p>
+								<div class="font-size">
+									<div class="size-box small-size">
+										<p>{{ trans('custom.A-') }}</p>
+										<span>{{ trans('custom.small_size') }}</span>
+									</div>
+									<div class="size-box medium-size active">
+										<p>{{ trans('custom.A') }}</p>
+										<span>{{ trans('custom.medium_size') }}</span>
+									</div>
+									<div class="size-box large-size">
+										<p>{{ trans('custom.A+') }}</p>
+										<span>{{ trans('custom.large_size') }}</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="setting-sidebar-overlay "></div>
+				{% endif %}
 			</div>
 		</div>
 		
 				<custom-main-menu style="display:none;"></custom-main-menu>	
+				
 	</div>
 </header>
 {% if store.scope %}
