@@ -303,6 +303,11 @@ isElementLoaded(selector){
 
 salla.onReady(() => (new App).loadTheApp());
 /****************** header */
+document.querySelector(".open-settings-btn").addEventListener("click", function() {
+  document.querySelector(".system-setting-sidebar").classList.add("active");
+  document.querySelector(".setting-sidebar-overlay").classList.add("active");
+  document.querySelector("body").classList.add("overflow-hidden");
+});
   function closeSettings() {
             document.getElementById('settingsSidebar').classList.remove('active');
             document.getElementById('overlay').classList.remove('active');

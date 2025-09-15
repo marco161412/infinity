@@ -120,7 +120,7 @@
 						<div id="bigMenu" class="main-menu"></div>
 					</div>
 				{% endif %}
-				{% if hide_settings == false %}
+				{# {% if hide_settings == false %}
 					<div class="system-setting-sidebar ">
 						<h3 class="header-sidebar">
 							<i class="sicon-settings"></i>
@@ -180,11 +180,11 @@
 						</ul>
 					</div>
 					<div class="setting-sidebar-overlay "></div>
-				{% endif %}
-				<div class="system-setting-sidebar" id="settingsSidebar">
+				{% endif %} #}
+				<div class="system-setting-sidebar" >
 					<h3 class="header-sidebar">
 						⚙️ الإعدادات
-						<span class="cancel-btn" onclick="closeSettings()">✖️</span>
+						<span class="cancel-btn" >✖️</span>
 					</h3>
 					<ul class="content-sidebar">
 						<!-- البحث -->
@@ -302,9 +302,8 @@
 					</ul>
 				</div>
 
-    <!-- الطبقة المتراكبة -->
-    <div class="setting-sidebar-overlay" id="overlay" onclick="closeSettings()"></div>
-
+    
+    		<div class="setting-sidebar-overlay" id="overlay" onclick="closeSettings()"></div>
 			</div>
 		</div>
 		

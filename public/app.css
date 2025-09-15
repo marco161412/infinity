@@ -23987,214 +23987,6 @@ body.font-dinnextltarabic-regular .btn--add-to-cart {
 .store-header .main-nav-container .navbar-sidebar-overlay.active {
   transform: translateX(0%);
 }
-.store-header .system-setting-sidebar {
-  background-color: #fff;
-  background-color: var(--white);
-  box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.05);
-  z-index: 101;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  transition: all 0.8s;
-  width: 380px;
-  max-width: 100%;
-  display: block;
-  transform: translateX(-100%);
-}
-.store-header .system-setting-sidebar .header-sidebar {
-  padding: 15px;
-  font-size: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: linear-gradient(180deg, #414042 -180%, transparent);
-  background: linear-gradient(180deg, var(--color-primary) -180%, transparent);
-}
-.store-header .system-setting-sidebar .header-sidebar i:last-child {
-  display: flex;
-  width: 24px;
-  height: 24px;
-  background: rgba(219, 81, 81, 0.5098039216);
-  color: #fff;
-  color: var(--white);
-  align-items: center;
-  justify-content: center;
-  margin-right: auto;
-  font-size: 18px;
-  cursor: pointer;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-}
-.store-header .system-setting-sidebar .header-sidebar i:last-child:hover {
-  background: rgba(187, 51, 51, 0.6392156863);
-}
-.store-header .system-setting-sidebar .content-sidebar {
-  padding: 20px 15px;
-  overflow: auto;
-  height: calc(100vh - 73px);
-}
-.store-header .system-setting-sidebar .content-sidebar li {
-  border-bottom: 1px dashed #e1e3ea;
-  padding-bottom: 15px;
-  margin-bottom: 18px;
-}
-.store-header .system-setting-sidebar .content-sidebar li h4 {
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 0;
-}
-.store-header .system-setting-sidebar .content-sidebar li .p {
-  margin-bottom: 15px;
-  color: #383d5a;
-}
-.store-header .system-setting-sidebar .content-sidebar li .p i {
-  font-size: 18px;
-}
-.store-header .system-setting-sidebar .content-sidebar li button {
-  font-size: 16px;
-  background: transparent none repeat 0 0/auto auto padding-box border-box scroll;
-  background: initial;
-  border: 1px solid #414042;
-  border: 1px solid var(--color-primary);
-  color: #414042;
-  color: var(--color-primary);
-  border-radius: 8px;
-  padding: 7px;
-}
-.store-header .system-setting-sidebar .content-sidebar li button:hover {
-  background-color: #414042;
-  background-color: var(--color-primary);
-  color: #ff6767;
-  color: var(--color-primary-reverse);
-}
-.store-header .system-setting-sidebar .content-sidebar li .flex-content {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-.store-header .system-setting-sidebar .content-sidebar li .flex-content .toggle-mode {
-  all: unset;
-  width: 100%;
-}
-.store-header .system-setting-sidebar .content-sidebar li .flex-content .toggle-mode input {
-  display: none;
-}
-.store-header .system-setting-sidebar .content-sidebar li .flex-content .toggle-mode input:checked + label span::before {
-  background: transparent none repeat 0 0/auto auto padding-box border-box scroll;
-  background: initial;
-  border-color: #414042;
-  border-color: var(--color-primary);
-}
-.store-header .system-setting-sidebar .content-sidebar li .flex-content .toggle-mode input:checked + label span::after {
-  background: transparent;
-}
-.store-header .system-setting-sidebar .content-sidebar li .flex-content .toggle-mode input:checked + label img {
-  border-color: #414042;
-  border-color: var(--color-primary);
-}
-.store-header .system-setting-sidebar .content-sidebar li .flex-content .toggle-mode label {
-  cursor: pointer;
-  width: 100%;
-  display: block;
-}
-.store-header .system-setting-sidebar .content-sidebar li .flex-content .toggle-mode label img {
-  width: 100%;
-  border-radius: 10px;
-  border: 2px solid #ebebeb;
-  margin-bottom: 8px;
-}
-.store-header .system-setting-sidebar .content-sidebar li .flex-content .toggle-mode label span {
-  font-size: 17px;
-  position: relative;
-  padding-right: 29px;
-}
-.store-header .system-setting-sidebar .content-sidebar li .flex-content .toggle-mode label span::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  background: #ededed;
-  border: 5px solid #ededed;
-  border-radius: 50%;
-  top: 2px;
-  right: 0;
-  z-index: 1;
-}
-.store-header .system-setting-sidebar .content-sidebar li .flex-content .toggle-mode label span::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  background: #ededed;
-  border-radius: 50%;
-  top: 2px;
-  right: 0;
-}
-.store-header .system-setting-sidebar .content-sidebar li .font-size {
-  display: flex;
-  gap: 20px;
-}
-.store-header .system-setting-sidebar .content-sidebar li .font-size .size-box {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.store-header .system-setting-sidebar .content-sidebar li .font-size .size-box p {
-  border-radius: 6px;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 25px;
-  direction: ltr;
-  cursor: pointer;
-  border: 2px solid #ededed;
-  margin: 0 auto;
-}
-.store-header .system-setting-sidebar .content-sidebar li .font-size .size-box span {
-  line-height: 20px;
-}
-.store-header .system-setting-sidebar .content-sidebar li .font-size .size-box.active p {
-  color: #414042;
-  color: var(--color-primary);
-  border-color: #414042;
-  border-color: var(--color-primary);
-}
-.store-header .system-setting-sidebar .content-sidebar li .font-size .size-box.active span {
-  font-weight: 500;
-}
-.store-header .system-setting-sidebar.active {
-  transform: translateX(0);
-}
-.store-header .setting-sidebar-overlay {
-  height: 100%;
-  width: 100%;
-  z-index: 99;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  transition: all 0.8s;
-  transform: translateX(-100%);
-}
-.store-header .setting-sidebar-overlay.active {
-  transform: translateX(0%);
-}
 .topnav-is-dark .store-header .top-navbar {
   background-color: var(--color-dark-back-header);
   color: var(--color-dark-color-header);
@@ -24914,8 +24706,8 @@ body:has(.home) .store-header:not(:has(.fixed-header)) .transparent-header .inne
 .system-setting-sidebar {
   position: fixed;
   top: 0;
-  right: -400px;
-  width: 400px;
+  left: -320px;
+  width: 320px;
   height: 100vh;
   background: white;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -24924,7 +24716,7 @@ body:has(.home) .store-header:not(:has(.fixed-header)) .transparent-header .inne
   overflow-y: auto;
 }
 .system-setting-sidebar.active {
-  right: 0;
+  left: 0;
 }
 /* رأس الشريط الجانبي */
 .header-sidebar {
@@ -25146,16 +24938,16 @@ body:has(.home) .store-header:not(:has(.fixed-header)) .transparent-header .inne
 }
 /* زر فتح الإعدادات */
 .open-settings-btn {
-  position: fixed;
+  position: relative;
   top: 20px;
   right: 20px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
-  padding: 12px 20px;
-  border-radius: 25px;
+  padding: 12px;
+  border-radius: 50%;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
   transition: all 0.3s;
 }
