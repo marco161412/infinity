@@ -308,38 +308,32 @@ document.querySelector(".open-settings-btn").addEventListener("click", function(
   document.querySelector(".setting-sidebar-overlay").classList.add("active");
   document.querySelector("body").classList.add("overflow-hidden");
 });
-document.querySelectorAll(".cancel-btn, .setting-sidebar-overlay").addEventListener("click", function() {
-  document.querySelector(".system-setting-sidebar").classList.remove("active");
-  document.querySelector(".setting-sidebar-overlay").classList.remove("active");
-  document.querySelector("body").classList.remove("overflow-hidden");
-
+document.querySelectorAll(".cancel-btn, .setting-sidebar-overlay").forEach(function(el) {
+  el.addEventListener("click", function() {
+    document.querySelector(".system-setting-sidebar").classList.remove("active");
+    document.querySelector(".setting-sidebar-overlay").classList.remove("active");
+    document.querySelector("body").classList.remove("overflow-hidden");
+  });
 });
-  // function closeSettings() {
-  //           document.getElementById('settingsSidebar').classList.remove('active');
-  //           document.getElementById('overlay').classList.remove('active');
-  //       }
-  //       function openSettings() {
-  //           document.getElementById('settingsSidebar').classList.add('active');
-  //           document.getElementById('overlay').classList.add('active');
-  //       }
-         function detectSystemTheme() {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.getElementById('dark-mode').checked = true;
-                changeTheme('dark');
-            }
-        }
+
+        //  function detectSystemTheme() {
+        //     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        //         document.getElementById('dark-mode').checked = true;
+        //         changeTheme('dark');
+        //     }
+        // }
 
         // استماع لتغيير السمة في النظام
-        if (window.matchMedia) {
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-                if (!localStorage.getItem('theme')) {
-                    if (e.matches) {
-                        document.getElementById('dark-mode').checked = true;
-                        changeTheme('dark');
-                    } else {
-                        document.getElementById('light-mode').checked = true;
-                        changeTheme('light');
-                    }
-                }
-            });
-        }
+        // if (window.matchMedia) {
+        //     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        //         if (!localStorage.getItem('theme')) {
+        //             if (e.matches) {
+        //                 document.getElementById('dark-mode').checked = true;
+        //                 changeTheme('dark');
+        //             } else {
+        //                 document.getElementById('light-mode').checked = true;
+        //                 changeTheme('light');
+        //             }
+        //         }
+        //     });
+        // }
