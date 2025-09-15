@@ -182,125 +182,125 @@
 					<div class="setting-sidebar-overlay "></div>
 				{% endif %}
 				<div class="system-setting-sidebar" id="settingsSidebar">
-        <h3 class="header-sidebar">
-            ⚙️ الإعدادات
-            <span class="cancel-btn" onclick="closeSettings()">✖️</span>
-        </h3>
-        <ul class="content-sidebar">
-            <!-- البحث -->
-            <li>
-                <h4>
-                    🔍 البحث
-                </h4>
-                <p class="p">ابحث في المتجر</p>
-                <div class="search-settings">
-                    <input type="text" class="search-input" placeholder="ابحث عن المنتجات..." id="searchInput">
-                    <span class="search-icon">🔍</span>
-                </div>
-            </li>
+					<h3 class="header-sidebar">
+						⚙️ الإعدادات
+						<span class="cancel-btn" onclick="closeSettings()">✖️</span>
+					</h3>
+					<ul class="content-sidebar">
+						<!-- البحث -->
+						<li>
+							<h4>
+								🔍 البحث
+							</h4>
+							<p class="p">ابحث في المتجر</p>
+							<div class="search-settings">
+								<input type="text" class="search-input" placeholder="ابحث عن المنتجات..." id="searchInput">
+								<span class="search-icon">🔍</span>
+							</div>
+						</li>
 
-            <!-- تسجيل الدخول / البروفايل -->
-            <li>
-                <h4>
-                    👤 الحساب الشخصي
-                </h4>
-                <div class="account-info" id="accountInfo">
-                    <div class="user-avatar">👤</div>
-                    <div class="user-details">
-                        <h5 id="userName">مرحبا بك</h5>
-                        <p id="userStatus">غير مسجل الدخول</p>
-                    </div>
-                </div>
-                <button type="button" class="btn--rounded-gray" onclick="toggleLogin()" id="loginBtn">
-                    تسجيل الدخول
-                </button>
-            </li>
+						<!-- تسجيل الدخول / البروفايل -->
+						<li>
+							<h4>
+								👤 الحساب الشخصي
+							</h4>
+							<div class="account-info" id="accountInfo">
+								<div class="user-avatar">👤</div>
+								<div class="user-details">
+									<h5 id="userName">مرحبا بك</h5>
+									<p id="userStatus">غير مسجل الدخول</p>
+								</div>
+							</div>
+							<button type="button" class="btn--rounded-gray" onclick="toggleLogin()" id="loginBtn">
+								تسجيل الدخول
+							</button>
+						</li>
 
-            <!-- اللغة والعملة -->
-            <li class="language_currency">
-                <h4>
-                    🌍 اللغة والعملة
-                </h4>
-                <div class="language-toggle">
-                    <div class="language-option active" onclick="changeLanguage('ar')">العربية</div>
-                    <div class="language-option" onclick="changeLanguage('en')">English</div>
-                </div>
-                <p class="p">
-                    <span class="currency-display">
-                        <span id="currentLanguage">العربية</span>
-                        <em class="mx-1">|</em>
-                        <span id="currentCurrency">ريال سعودي 💰</span>
-                    </span>
-                </p>
-                <button type="button" class="btn--rounded-gray" onclick="openCurrencyModal()">
-                    تغيير العملة
-                </button>
-            </li>
+						<!-- اللغة والعملة -->
+						<li class="language_currency">
+							<h4>
+								🌍 اللغة والعملة
+							</h4>
+							<div class="language-toggle">
+								<div class="language-option active" onclick="changeLanguage('ar')">العربية</div>
+								<div class="language-option" onclick="changeLanguage('en')">English</div>
+							</div>
+							<p class="p">
+								<span class="currency-display">
+									<span id="currentLanguage">العربية</span>
+									<em class="mx-1">|</em>
+									<span id="currentCurrency">ريال سعودي 💰</span>
+								</span>
+							</p>
+							<button type="button" class="btn--rounded-gray" onclick="openCurrencyModal()">
+								تغيير العملة
+							</button>
+						</li>
 
-            <!-- مظهر المتجر -->
-            <li>
-                <h4>
-                    🎨 مظهر المتجر
-                </h4>
-                <p class="p">اختر الوضع المفضل</p>
-                <div class="flex-content">
-                    <div class="toggle-mode">
-                        <input type="radio" id="light-mode" name="system-mode" checked onclick="changeTheme('light')">
-                        <label for="light-mode">
-                            <div style="width:40px;height:40px;background:#fff;border:1px solid #ddd;border-radius:4px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">☀️</div>
-                            <span>الوضع الفاتح</span>
-                        </label>
-                    </div>
-                    <div class="toggle-mode">
-                        <input type="radio" id="dark-mode" name="system-mode" onclick="changeTheme('dark')">
-                        <label for="dark-mode">
-                            <div style="width:40px;height:40px;background:#333;border:1px solid #555;border-radius:4px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">🌙</div>
-                            <span>الوضع المظلم</span>
-                        </label>
-                    </div>
-                </div>
-            </li> 
+						<!-- مظهر المتجر -->
+						<li>
+							<h4>
+								🎨 مظهر المتجر
+							</h4>
+							<p class="p">اختر الوضع المفضل</p>
+							<div class="flex-content">
+								<div class="toggle-mode">
+									<input type="radio" id="light-mode" name="system-mode" checked onclick="changeTheme('light')">
+									<label for="light-mode">
+										<div style="width:40px;height:40px;background:#fff;border:1px solid #ddd;border-radius:4px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">☀️</div>
+										<span>الوضع الفاتح</span>
+									</label>
+								</div>
+								<div class="toggle-mode">
+									<input type="radio" id="dark-mode" name="system-mode" onclick="changeTheme('dark')">
+									<label for="dark-mode">
+										<div style="width:40px;height:40px;background:#333;border:1px solid #555;border-radius:4px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">🌙</div>
+										<span>الوضع المظلم</span>
+									</label>
+								</div>
+							</div>
+						</li> 
 
-            <!-- حجم الخط -->
-            <li>
-                <h4>
-                    📝 حجم النص
-                </h4>
-                <p class="p">اختر حجم النص المناسب</p>
-                <div class="font-size">
-                    <div class="size-box small-size" onclick="changeFontSize('small')">
-                        <p>A-</p>
-                        <span>صغير</span>
-                    </div>
-                    <div class="size-box medium-size active" onclick="changeFontSize('medium')">
-                        <p>A</p>
-                        <span>متوسط</span>
-                    </div>
-                    <div class="size-box large-size" onclick="changeFontSize('large')">
-                        <p>A+</p>
-                        <span>كبير</span>
-                    </div>
-                </div>
-            </li>
+						<!-- حجم الخط -->
+						<li>
+							<h4>
+								📝 حجم النص
+							</h4>
+							<p class="p">اختر حجم النص المناسب</p>
+							<div class="font-size">
+								<div class="size-box small-size" onclick="changeFontSize('small')">
+									<p>A-</p>
+									<span>صغير</span>
+								</div>
+								<div class="size-box medium-size active" onclick="changeFontSize('medium')">
+									<p>A</p>
+									<span>متوسط</span>
+								</div>
+								<div class="size-box large-size" onclick="changeFontSize('large')">
+									<p>A+</p>
+									<span>كبير</span>
+								</div>
+							</div>
+						</li>
 
-            <!-- أيقونة السلة -->
-            <li>
-                <h4>
-                    🛒 شكل السلة
-                </h4>
-                <p class="p">اختر شكل أيقونة السلة</p>
-                <div class="cart-settings">
-                    <div class="cart-icon-selector">
-                        <div class="cart-icon-option active" onclick="changeCartIcon('🛒')">🛒</div>
-                        <div class="cart-icon-option" onclick="changeCartIcon('🛍️')">🛍️</div>
-                        <div class="cart-icon-option" onclick="changeCartIcon('🎒')">🎒</div>
-                        <div class="cart-icon-option" onclick="changeCartIcon('👜')">👜</div>
-                    </div>
-                </div>
-                <p class="p" style="margin-top: 10px;">الأيقونة الحالية: <span id="currentCartIcon">🛒</span></p>
-            </li>
-        </ul>
-    </div>
+						<!-- أيقونة السلة -->
+						<li>
+							<h4>
+								🛒 شكل السلة
+							</h4>
+							<p class="p">اختر شكل أيقونة السلة</p>
+							<div class="cart-settings">
+								<div class="cart-icon-selector">
+									<div class="cart-icon-option active" onclick="changeCartIcon('🛒')">🛒</div>
+									<div class="cart-icon-option" onclick="changeCartIcon('🛍️')">🛍️</div>
+									<div class="cart-icon-option" onclick="changeCartIcon('🎒')">🎒</div>
+									<div class="cart-icon-option" onclick="changeCartIcon('👜')">👜</div>
+								</div>
+							</div>
+							<p class="p" style="margin-top: 10px;">الأيقونة الحالية: <span id="currentCartIcon">🛒</span></p>
+						</li>
+					</ul>
+				</div>
 
     <!-- الطبقة المتراكبة -->
     <div class="setting-sidebar-overlay" id="overlay" onclick="closeSettings()"></div>
