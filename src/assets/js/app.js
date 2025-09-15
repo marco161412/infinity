@@ -308,14 +308,20 @@ document.querySelector(".open-settings-btn").addEventListener("click", function(
   document.querySelector(".setting-sidebar-overlay").classList.add("active");
   document.querySelector("body").classList.add("overflow-hidden");
 });
-  function closeSettings() {
-            document.getElementById('settingsSidebar').classList.remove('active');
-            document.getElementById('overlay').classList.remove('active');
-        }
-        function openSettings() {
-            document.getElementById('settingsSidebar').classList.add('active');
-            document.getElementById('overlay').classList.add('active');
-        }
+document.querySelectorAll(".cancel-btn, .setting-sidebar-overlay").addEventListener("click", function() {
+  document.querySelector(".system-setting-sidebar").classList.remove("active");
+  document.querySelector(".setting-sidebar-overlay").classList.remove("active");
+  document.querySelector("body").classList.remove("overflow-hidden");
+
+});
+  // function closeSettings() {
+  //           document.getElementById('settingsSidebar').classList.remove('active');
+  //           document.getElementById('overlay').classList.remove('active');
+  //       }
+  //       function openSettings() {
+  //           document.getElementById('settingsSidebar').classList.add('active');
+  //           document.getElementById('overlay').classList.add('active');
+  //       }
          function detectSystemTheme() {
             if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
                 document.getElementById('dark-mode').checked = true;
