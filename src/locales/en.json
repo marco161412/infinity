@@ -23,5 +23,34 @@
   "common": {
     "bank_offer_sub_title_multiple": "Pay for your purchases via one of the following bank cards and get the specified discount",
     "bank_offer_sub_title_single": "Pay for your purchases via :bank_name bank card and get discount"
+  },
+  "custom":{
+    "img_zoom":"Click on the image to enlarge it",
+    "description":"description title",
+    "comments":"comments & questions",
+    "show_more":"show more",
+    "social_media":"socialmedia",
+    "quantity_before":"Attention: Limited quantities of this product remain, only",
+    "quantity_after":" Items available!",
+    "similar_products":"similar products",
+    "setting":"General settings",
+    "Language_currency":"Language and currency",
+    "change":"change",
+    "store_appearance":"Store Appearance",
+    "choose_mode":"Choose day or night mode",
+    "light_mode":"light mode",
+    "dark_mode":"dark mode",
+    "text_size":"Text size",
+    "choose_size":"Choose the text size that suits you.",
+    "small_size":"small",
+    "medium_size":"medium",
+    "large_size":"large",
+    "A-":"A-",
+    "A":"A",
+    "A+":"A+",
+    "show_all_custom":"show all",
+    "click_here_to_show_more":"click here to show more",
+    "total":"Total",
+    "filters":"Filters"
   }
 }

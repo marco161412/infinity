@@ -23,5 +23,36 @@
   "common": {
     "bank_offer_sub_title_multiple": "ادفع قيمة مشترياتك عبر أحد البطاقات البنكة التالية واحصل على الخصم المحدد",
     "bank_offer_sub_title_single": "ادفع قيمة مشترياتك عبر أحد بطاقات بنك :bank_name واحصل على خصم بنسبة "
-  }
+  },
+  "custom":{
+          "img_zoom":"اضغط علي الصورة لتكبيرها",
+          "description":"تفاصيل المنتج",
+          "comments":" الاسئلة و التعليقات",
+          "save":"وفر",
+          "show_more":"قراءة المزيد",
+          "social_media":"وسائل التواصل",
+          "quantity_before":"تنبيه: متبقى كمية محدودة من هذا المنتج، فقط",
+          "quantity_after":" عناصر متوفرة!",
+          "similar_products":"منتجات مشابهه",
+          "setting":"اعدادات عامة",
+          "Language_currency":"اللغة والعملة",
+          "change":"تغيير",
+          "store_appearance":"مظهر المتجر",
+          "choose_mode":"اختر الوضع النهاري او الليلي",
+          "light_mode":"الوضع النهاري",
+          "dark_mode":"الوضع الليلي",
+          "text_size":"حجم النص",
+          "choose_size":"اختر حجم النص المناسب لك",
+          "small_size":"صغير",
+          "medium_size":"متوسط",
+          "large_size":"كبير",
+          "A-":"A-",
+          "A":"A",
+          "A+":"A+",
+          "click_here_to_show_more":"انقر هنا للمزيد من",
+          "total":"الإجمالي",
+          "filters":"الفلترة"
+    
+
+}
 }
