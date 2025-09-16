@@ -316,6 +316,73 @@ document.querySelectorAll(".cancel-btn, .setting-sidebar-overlay").forEach(funct
   });
 });
 
+
+ var smallSize = document.querySelector(".small-size");
+  var mediumSize = document.querySelector(".medium-size");
+  var largeSize = document.querySelector(".large-size");
+  var body = document.querySelector("body");
+
+  function zoomBody(zoomPercentage, element) {
+    var sizeBoxes = document.querySelectorAll(".size-box");
+    sizeBoxes.forEach(function (box) {
+      box.classList.remove("active");
+    });
+    element.classList.add("active");
+    body.style.zoom = zoomPercentage + "%";
+    setCookie("fontSize", zoomPercentage, 30);
+  }
+
+  // ✅ تعريف setCookie
+  function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
+
+  // ✅ تعريف getCookie
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  smallSize.addEventListener("click", function () {
+    zoomBody(90, smallSize);
+  });
+  mediumSize.addEventListener("click", function () {
+    zoomBody(100, mediumSize);
+  });
+  largeSize.addEventListener("click", function () {
+    zoomBody(110, largeSize);
+  });
+
+  var storedSize = getCookie("fontSize");
+  if (storedSize) {
+    switch (parseInt(storedSize)) {
+      case 90:
+        zoomBody(90, smallSize);
+        break;
+      case 100:
+        zoomBody(100, mediumSize);
+        break;
+      case 110:
+        zoomBody(110, largeSize);
+        break;
+      default:
+        break;
+    }
+  }
+
+
         //  function detectSystemTheme() {
         //     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         //         document.getElementById('dark-mode').checked = true;
