@@ -111,7 +111,9 @@
 								<i class="sicon-location header-btn__icon rtl:ml-1 ltr:mr-1"></i> {{ store.scope.name }}
 							</button>
 						{% endif %}
-						<button class="open-settings-btn">⚙️</button>
+						<button class="header-btn setting-btn open-settings-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
+								<i class="header-btn__icon sicon-settings"></i>
+						</button>
 					</div>
 				</div>
 				{% if navbar %}
@@ -128,19 +130,50 @@
 							<i class="sicon-cancel cancel-btn"></i>
 						</h3>
 						<ul class="content-sidebar">
-							<li class="language_currency">
-								<h4>
-									<i class="sicon-earth"></i>
-									{{ trans('custom.Language_currency') }}
-								</h4>
-
-								<p class="p">{{ user.language.name }}<em class="mx-1.5">|</em>
-									{{ currency.code == "SAR" ? "<i class='sicon-sar'></i>"|raw : currency.symbol }}</p>
-
-								<button type="button" onclick="salla.event.dispatch('localization::open')" class="btn--rounded-gray basis-0">
-									{{ trans('custom.change') }}
-								</button>
+							<li class="settings-icons">
+								<div>
+									{% if not search_in_header %}
+										<button onclick="salla.event.dispatch('search::open')" title="زر البحث" class="header-btn search {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
+											<i class="header-btn__icon sicon-search"></i>
+										</button>
+									{% endif %}
+									{% if store.scope %}
+										<button title="زر الفروع" class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}"
+												onclick="salla.event.dispatch('scopes::open', {'mode': 'default'})">
+											<i class="sicon-location header-btn__icon rtl:ml-1 ltr:mr-1"></i> {{ store.scope.name }}
+										</button>
+									{% endif %}
+									{% if not cart_in_header %}
+										<salla-cart-summary title="زر سلة المنتجات" class="ml-4 rtl:ml-[unset] salla-cart-summary header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
+											<i slot="icon" class="header-btn__icon icon {{theme.settings.get('cart_icon')}}"></i>
+										</salla-cart-summary>
+									{% endif %}	
+									{% if not login_and_profile_in_header %}
+										{% if user.type=='user' %}
+											<salla-user-menu avatar-only show-header title="صورة الشخصية" class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}"></salla-user-menu>
+										{% else %}
+											<button title="زر تسجل الدخول" class="header-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}" aria-label="user-icon" onclick="salla.event.dispatch('login::open')">
+												<i class="header-btn__icon sicon-user-circle" ></i>
+											</button>
+										{% endif %}
+									{% endif %}
+								</div>
 							</li>
+							{% if not lang_and_currency_in_header %}
+								<li class="language_currency">
+									<h4>
+										<i class="sicon-earth"></i>
+										{{ trans('custom.Language_currency') }}
+									</h4>
+
+									<p class="p">{{ user.language.name }}<em class="mx-1.5">|</em>
+										{{ currency.code == "SAR" ? "<i class='sicon-sar'></i>"|raw : currency.symbol }}</p>
+
+									<button type="button" onclick="salla.event.dispatch('localization::open')" class="btn--rounded-gray basis-0">
+										{{ trans('custom.change') }}
+									</button>
+								</li>
+							{% endif %}
 							<li>
 								<h4>
 									<i class="sicon-art-palette"></i>
@@ -181,129 +214,7 @@
 					</div>
 					<div class="setting-sidebar-overlay "></div>
 				{% endif %}
-				{# <div class="system-setting-sidebar" >
-					<h3 class="header-sidebar">
-						⚙️ الإعدادات
-						<span class="cancel-btn" >✖️</span>
-					</h3>
-					<ul class="content-sidebar">
-						<!-- البحث -->
-						<li>
-							<h4>
-								🔍 البحث
-							</h4>
-							<p class="p">ابحث في المتجر</p>
-							<div class="search-settings">
-								<input type="text" class="search-input" placeholder="ابحث عن المنتجات..." id="searchInput">
-								<span class="search-icon">🔍</span>
-							</div>
-						</li>
-
-						<!-- تسجيل الدخول / البروفايل -->
-						<li>
-							<h4>
-								👤 الحساب الشخصي
-							</h4>
-							<div class="account-info" id="accountInfo">
-								<div class="user-avatar">👤</div>
-								<div class="user-details">
-									<h5 id="userName">مرحبا بك</h5>
-									<p id="userStatus">غير مسجل الدخول</p>
-								</div>
-							</div>
-							<button type="button" class="btn--rounded-gray" onclick="toggleLogin()" id="loginBtn">
-								تسجيل الدخول
-							</button>
-						</li>
-
-						<!-- اللغة والعملة -->
-						<li class="language_currency">
-							<h4>
-								🌍 اللغة والعملة
-							</h4>
-							<div class="language-toggle">
-								<div class="language-option active" onclick="changeLanguage('ar')">العربية</div>
-								<div class="language-option" onclick="changeLanguage('en')">English</div>
-							</div>
-							<p class="p">
-								<span class="currency-display">
-									<span id="currentLanguage">العربية</span>
-									<em class="mx-1">|</em>
-									<span id="currentCurrency">ريال سعودي 💰</span>
-								</span>
-							</p>
-							<button type="button" class="btn--rounded-gray" onclick="openCurrencyModal()">
-								تغيير العملة
-							</button>
-						</li>
-
-						<!-- مظهر المتجر -->
-						<li>
-							<h4>
-								🎨 مظهر المتجر
-							</h4>
-							<p class="p">اختر الوضع المفضل</p>
-							<div class="flex-content">
-								<div class="toggle-mode">
-									<input type="radio" id="light-mode" name="system-mode" checked onclick="changeTheme('light')">
-									<label for="light-mode">
-										<div style="width:40px;height:40px;background:#fff;border:1px solid #ddd;border-radius:4px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">☀️</div>
-										<span>الوضع الفاتح</span>
-									</label>
-								</div>
-								<div class="toggle-mode">
-									<input type="radio" id="dark-mode" name="system-mode" onclick="changeTheme('dark')">
-									<label for="dark-mode">
-										<div style="width:40px;height:40px;background:#333;border:1px solid #555;border-radius:4px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;">🌙</div>
-										<span>الوضع المظلم</span>
-									</label>
-								</div>
-							</div>
-						</li> 
-
-						<!-- حجم الخط -->
-						<li>
-							<h4>
-								📝 حجم النص
-							</h4>
-							<p class="p">اختر حجم النص المناسب</p>
-							<div class="font-size">
-								<div class="size-box small-size" onclick="changeFontSize('small')">
-									<p>A-</p>
-									<span>صغير</span>
-								</div>
-								<div class="size-box medium-size active" onclick="changeFontSize('medium')">
-									<p>A</p>
-									<span>متوسط</span>
-								</div>
-								<div class="size-box large-size" onclick="changeFontSize('large')">
-									<p>A+</p>
-									<span>كبير</span>
-								</div>
-							</div>
-						</li>
-
-						<!-- أيقونة السلة -->
-						<li>
-							<h4>
-								🛒 شكل السلة
-							</h4>
-							<p class="p">اختر شكل أيقونة السلة</p>
-							<div class="cart-settings">
-								<div class="cart-icon-selector">
-									<div class="cart-icon-option active" onclick="changeCartIcon('🛒')">🛒</div>
-									<div class="cart-icon-option" onclick="changeCartIcon('🛍️')">🛍️</div>
-									<div class="cart-icon-option" onclick="changeCartIcon('🎒')">🎒</div>
-									<div class="cart-icon-option" onclick="changeCartIcon('👜')">👜</div>
-								</div>
-							</div>
-							<p class="p" style="margin-top: 10px;">الأيقونة الحالية: <span id="currentCartIcon">🛒</span></p>
-						</li>
-					</ul>
-				</div>
-
-    
-    		<div class="setting-sidebar-overlay"></div> #}
+				
 			</div>
 		</div>
 		
