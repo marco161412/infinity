@@ -1,0 +1,159 @@
+/* customer */
+body{
+    .customer-sec{
+        .sidebar{
+            background-color:var(--color-secondary)!important;
+        }
+        .s-user-profile-field-label{
+            color:var(--main-text-color);
+            opacity: 0.8;
+        }
+        salla-user-settings{
+            
+            .s-user-settings-section{
+                background-color: var(--color-secondary);
+                color:var(--main-dark-text-color);
+                border-color: var(--stroke-light);
+                salla-list-tile{
+                    .s-list-tile-item{
+                         .s-list-tile-item-content{
+                            .s-list-tile-item-icon{
+                                .s-user-settings-section-icon{
+                                    svg{
+                                        fill:var(--secondary-text-color);
+                                    }
+                                }
+                            }
+                            .s-list-tile-item-title{
+                                .s-user-settings-section-title{
+                                    color:var(--secondary-text-color);
+                                }
+                            }
+                            .s-list-tile-item-subtitle{
+                                .s-user-settings-section-subtitle{
+                                    color:var(--secondary-text-color);
+                                    opacity: 0.8;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        salla-notifications{
+            .s-notifications-wrapper{
+                .s-notifications-container{
+                    salla-notification-item{
+                        .s-notifications-item{
+                            background-color: var(--color-secondary);
+                            color: var(--main-text-color);
+                            .s-notifications-item-icon{
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        salla-user-profile{
+            .s-user-profile-wrapper{
+                .s-user-profile-field{
+                    input{
+                        background-color:   var(--color-secondary) ;
+                        border-color: var(--stroke-light);
+                    }
+                    select{
+                        width: 100%;
+                    }
+                }
+            }
+            .s-user-profile-submit{
+                .s-button-btn{
+                    color: var(--color-primary-reverse);
+                    background-color: var(--color-primary);
+                    border-color: var(--color-primary);
+                }
+            }
+        }
+        
+    }
+    &.dark-mode{
+        .customer-sec{
+            .sidebar{
+                background-color:var(--color-dark-secondary)!important;
+            }
+            .s-user-profile-field-label{
+                color:var(--main-dark-text-color);
+            }
+            
+            salla-notifications{
+                .s-notifications-wrapper{
+                    .s-notifications-container{
+                        salla-notification-item{
+                            .s-notifications-item{
+                            background-color:var(--color-dark-secondary);
+                            .s-notifications-item-content{
+
+                            }
+                            color: var(--secondary-dark-text-color);
+                            }
+                        }
+                    }
+                }
+            }
+            salla-user-settings{
+                .s-user-settings-section{
+                    background-color: var(--color-dark-secondary);
+                    color:var(--main-dark-text-color);
+                    border-color: var(--stroke-dark);
+                    salla-list-tile{
+                        .s-list-tile-item{
+                            .s-list-tile-item-content{
+                                .s-list-tile-item-icon{
+                                    .s-user-settings-section-icon{
+                                        svg{
+                                            fill:var(--secondary-dark-text-color);
+                                        }
+                                    }
+                                }
+                                .s-list-tile-item-title{
+                                    .s-user-settings-section-title{
+                                        color:var(--secondary-dark-text-color);
+                                    }
+                                }
+                                .s-list-tile-item-subtitle{
+                                    .s-user-settings-section-subtitle{
+                                        color:var(--secondary-dark-text-color);
+                                        opacity: 0.8;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            salla-user-profile{
+                .s-user-profile-wrapper{
+                    .s-user-profile-field{
+                        input{
+                            background-color:  var(--color-dark-secondary) ;
+                            border-color: var(--stroke-dark);
+                        }
+                        
+                    }
+                }
+                .s-user-profile-submit{
+                    .s-button-btn{
+                        color: var(--color-dark-text-primary);
+                        background-color: var(--color-dark-primary);
+                        border-color: var(--color-dark-primary);
+                    }
+                    
+
+                }
+            }
+        }
+    }
+}

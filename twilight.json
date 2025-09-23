@@ -24,6 +24,62 @@
         "menu-images",
         "filters"
     ],
+    "groups": [
+        {
+            "id": "setting_all",
+            "icon": "sicon-settings",
+            "type": "page",
+            "label": "الاعدادات العامة"
+        },
+        {
+            "id": "whatsapp",
+            "icon": "sicon-whatsapp2",
+            "type": "page",
+            "label": "خيارات زر الواتساب"
+        },
+        {
+            "id": "loader",
+            "icon": "sicon-spinner",
+            "type": "page",
+            "label": "خيارات صفحة التحميل"
+        },
+        {
+            "id": "header",
+            "icon": "sicon-archive-upload",
+            "type": "page",
+            "label": "خيارات أعلى الصفحة"
+        },
+        {
+            "id": "card",
+            "icon": "sicon-archive-upload",
+            "type": "page",
+            "label": "خيارات كارد المنتج"
+        },
+        {
+            "id": "footer",
+            "icon": "sicon-archive-download",
+            "type": "page",
+            "label": "خيارات أسفل الصفحة"
+        },
+        {
+            "id": "categories_page",
+            "icon": "sicon-layout-grid",
+            "type": "page",
+            "label": "خيارات صفحة التصنيفات"
+        },
+        {
+            "id": "product_details_page",
+            "icon": "sicon-shopping-bag",
+            "type": "page",
+            "label": "خيارات صفحة المنتج"
+        },
+        {
+            "id": "cart_page",
+            "icon": "sicon-cart2",
+            "type": "page",
+            "label": "خيارات صفحة السلة"
+        }
+    ],
     "settings": [
         {
             "id": "squar_photo_bg_image_size",
@@ -84,13 +140,19 @@
             "label": "أعلى الصفحة",
             "value": "<h5 class='bg-primary flex items-center p-4 mb-8 text-white rounded-lg'><i class='sicon-archive-upload ml-3 text-secondary text-xl'></i>خيارات أعلى الصفحة</h5>",
             "variant": "h1",
-            "icon": "sicon-format-size"
+            "icon": "sicon-format-size",
+            "groups": [
+                "setting_all"
+            ]
         },
         {
             "type": "boolean",
             "id": "transparent_header",
             "label": "أعلى الصفحة شفاف",
-            "format": "switch"
+            "format": "switch",
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "navbar",
@@ -102,8 +164,10 @@
             "icon": "sicon-toggle-off",
             "value": true,
             "selected": false,
-            "required": false
-        },
+            "required": false,
+            "groups": [
+                "header"
+                ]       },
         {
             "id": "discount_img",
             "type": "string",
@@ -114,7 +178,10 @@
             "placeholder": "e.g. https://hostname.com/image.png",
             "icon": "sicon-image",
             "value": null,
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "header_trans_color",
@@ -133,6 +200,9 @@
                     "operation": "=",
                     "value": true
                 }
+            ],
+            "groups": [
+                "header"
             ]
         },
         {
@@ -144,7 +214,10 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": true
+            "selected": true,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "logo_in_center",
@@ -155,7 +228,10 @@
             "format": "switch",
             "required": false,
             "value": true,
-             "selected": true
+             "selected": true,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "search_in_header",
@@ -291,7 +367,10 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": false
+            "selected": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "type": "boolean",
@@ -324,7 +403,10 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": false
+            "selected": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "colors_header_title",
@@ -333,7 +415,10 @@
             "label": "الالوان",
             "value": "<h5 class=\"alert-box--danger flex items-center p-4 mb-8 text-white rounded-lg\"><i class=\"sicon-art-palette ml-3 text-secondary text-xl\"></i>الالوان</h5>",
             "variant": "h1",
-            "icon": "sicon-art-palette"
+            "icon": "sicon-art-palette",
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "header_back_color",
@@ -345,7 +430,10 @@
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#ffffff",
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "header_color",
@@ -357,7 +445,10 @@
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#212121",
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "header_back_search_color",
@@ -369,7 +460,10 @@
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#002F5B",
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "header_text_search_color",
@@ -381,7 +475,10 @@
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#9ca3af",
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "icons_color",
@@ -393,7 +490,10 @@
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#9ca3af",
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "icons_border_color",
@@ -405,7 +505,10 @@
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#9ca3af",
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "icons_back_color",
@@ -417,12 +520,18 @@
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#9ca3af",
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "type": "static",
             "id": "static-line_in_dark",
-            "format": "line"
+            "format": "line",
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "logo_in_dark",
@@ -434,7 +543,10 @@
             "placeholder": "e.g. https://hostname.com/image.png",
             "icon": "sicon-image",
             "value": null,
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "header_back_color_in_dark",
@@ -446,7 +558,10 @@
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#131415",
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "header_color_in_dark",
@@ -458,7 +573,10 @@
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#d6d6d7",
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "header_back_search_color_in_dark",
@@ -470,7 +588,10 @@
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#002f5b",
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "type": "boolean",
@@ -481,7 +602,10 @@
             "format": "switch",
             "required": false,
             "value": true,
-            "selected": false
+            "selected": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "header_text_search_color_in_dark",
@@ -493,18 +617,25 @@
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#B6D0F1",
-            "required": false
-        },{
+            "required": false,
+            "groups": [
+                "header"
+            ]
+        },
+        {
             "id": "icons_color_in_dark",
             "type": "string",
             "format": "color",
             "inputType": "color",
             "label": "لون الايقونات ",
-            "description": null,
+            "description": "فى الوضع المظلم",
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#9ca3af",
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "icons_border_color_in_dark",
@@ -512,11 +643,14 @@
             "format": "color",
             "inputType": "color",
             "label": "لون حواف الايقونات ",
-            "description": null,
+            "description": "فى الوضع المظلم",
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#9ca3af",
-            "required": false
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "id": "icons_back_color_in_dark",
@@ -524,16 +658,14 @@
             "format": "color",
             "inputType": "color",
             "label": "لون خلفية الايقونات ",
-            "description": null,
+            "description": "فى الوضع المظلم",
             "labelHTML": null,
             "icon": "sicon-format-fill",
             "value": "#9ca3af",
-            "required": false
-        },
-        {
-            "type": "static",
-            "id": "static-line3",
-            "format": "line"
+            "required": false,
+            "groups": [
+                "header"
+            ]
         },
         {
             "type": "static",

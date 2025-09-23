@@ -154,7 +154,7 @@ body{
         }
 
         .system-setting-sidebar{
-            background-color: var(--color-back-header);
+            background-color: var(--backHeader);
             box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.05);
             z-index: 101;
             position: fixed;
@@ -181,7 +181,6 @@ body{
                                 height: 24px;
                                 background: rgb(236, 62, 62);
                                 color: #fff;
-                                color: var(--white);
                                 align-items: center;
                                 justify-content: center;
                                 margin-right: auto;
@@ -411,160 +410,169 @@ body{
             }
         }
     }
+    &.theme-dark{
+        --backHeader:var(--color-dark-back-header);
+        --textHeader:var(--color-dark-color-header);
+        --inputBack:var(--color-dark-input-back-header);
+        --inputText:var(--color-dark-input-text-header);
+        --iconBack:var(--icons-dark-back-color);
+        --iconColor:var(--icons-dark-color);
+        --primary:var(--color-dark-primary);
+    }
 }
-body.theme-dark{
-  .store-header{
-    .top-navbar{
-        background-color: var(--color-dark-back-header);
-        color:var(--color-dark-color-header);
-        border-color: var(--color-dark-color-header) ;
-        outline: var(--color-dark-color-header) ;
+// body.theme-dark{
+//   .store-header{
+//     .top-navbar{
+//         background-color: var(--color-dark-back-header);
+//         color:var(--color-dark-color-header);
+//         border-color: var(--color-dark-color-header) ;
+//         outline: var(--color-dark-color-header) ;
        
-        .inner{
+//         .inner{
            
-            .header-nav{
-                .header-logo-links{
-                    .side-menu-bar-icon{
-                        .menu-line-zigzag {
-                            .custom-line{
-                                background-color: var(--color-dark-color-header);
-                            }
-                        }}
-                }
-                .header-search {
-                    salla-search{
-                        svg{
-                                fill:var(--color-dark-input-text-header) ;
-                                opacity: 0.7;
-                            }
-                        .s-search-input{
-                            background-color: var(--color-dark-input-back-header);
-                            border: 1px solid;
-                            color: var(--color-dark-input-text-header);
-                            border-color: var(--color-dark-input-back-header);
-                            &::placeholder{
-                                color: var(--color-dark-input-text-header);
-                            }
-                        }
-                        .s-search-results{
-                            background-color: inherit;
-                            color: inherit;
+//             .header-nav{
+//                 .header-logo-links{
+//                     .side-menu-bar-icon{
+//                         .menu-line-zigzag {
+//                             .custom-line{
+//                                 background-color: var(--color-dark-color-header);
+//                             }
+//                         }}
+//                 }
+//                 .header-search {
+//                     salla-search{
+//                         svg{
+//                                 fill:var(--color-dark-input-text-header) ;
+//                                 opacity: 0.7;
+//                             }
+//                         .s-search-input{
+//                             background-color: var(--color-dark-input-back-header);
+//                             border: 1px solid;
+//                             color: var(--color-dark-input-text-header);
+//                             border-color: var(--color-dark-input-back-header);
+//                             &::placeholder{
+//                                 color: var(--color-dark-input-text-header);
+//                             }
+//                         }
+//                         .s-search-results{
+//                             background-color: inherit;
+//                             color: inherit;
                             
                             
-                            .s-search-product{
-                                &:first-of-type{
-                                     border-top: 1px solid var(--color-dark-input-text-header);
-                                }
-                               &:last-of-type{
-                                     border-color: transparent;
-                                }
-                                background-color: var(--color-dark-input-back-header); 
+//                             .s-search-product{
+//                                 &:first-of-type{
+//                                      border-top: 1px solid var(--color-dark-input-text-header);
+//                                 }
+//                                &:last-of-type{
+//                                      border-color: transparent;
+//                                 }
+//                                 background-color: var(--color-dark-input-back-header); 
                                  
-                                .s-search-product-title{
-                                        color:var(--color-dark-input-text-header);
+//                                 .s-search-product-title{
+//                                         color:var(--color-dark-input-text-header);
                                         
-                                    }
-                                    .s-search-product-price{
-                                        color: var(--main-dark-text-color);
-                                        .s-search-product-regular-price{
-                                            color: var(--main-dark-text-color);
-                                            opacity: 0.7;
-                                        }
-                                    }
-                            }
-                        }
-                        &.search-transparent{
-                            svg{
-                                fill:var(--color-dark-input-back-header) ;
-                            }
-                            .s-search-input{
-                                background-color: transparent;
-                                &::placeholder{
-                                    color: inherit;
-                                }
-                            }
-                            .s-search-results{
-                                background-color: var(--color-dark-back-header);
-                                color: inherit;
+//                                     }
+//                                     .s-search-product-price{
+//                                         color: var(--main-dark-text-color);
+//                                         .s-search-product-regular-price{
+//                                             color: var(--main-dark-text-color);
+//                                             opacity: 0.7;
+//                                         }
+//                                     }
+//                             }
+//                         }
+//                         &.search-transparent{
+//                             svg{
+//                                 fill:var(--color-dark-input-back-header) ;
+//                             }
+//                             .s-search-input{
+//                                 background-color: transparent;
+//                                 &::placeholder{
+//                                     color: inherit;
+//                                 }
+//                             }
+//                             .s-search-results{
+//                                 background-color: var(--color-dark-back-header);
+//                                 color: inherit;
                                
-                                .s-search-product{
-                                    .s-search-product-title{
-                                        color:var(--color-dark-input-text-header);
+//                                 .s-search-product{
+//                                     .s-search-product-title{
+//                                         color:var(--color-dark-input-text-header);
                                         
-                                    }
-                                        border-color: var(--color-dark-input-text-header);
-                                        &:hover{
-                                            opacity: 0.9;
-                                        }
-                                        &:last-of-type{
-                                            border-color: transparent;
-                                        }
-                                }
-                            }
-                        }
-                    }
+//                                     }
+//                                         border-color: var(--color-dark-input-text-header);
+//                                         &:hover{
+//                                             opacity: 0.9;
+//                                         }
+//                                         &:last-of-type{
+//                                             border-color: transparent;
+//                                         }
+//                                 }
+//                             }
+//                         }
+//                     }
                    
                   
-                }
-                .header-icons{
-                    .header-btn{
-                        margin-right: 10px;
+//                 }
+//                 .header-icons{
+//                     .header-btn{
+//                         margin-right: 10px;
                         
-                        .header-btn__icon{
-                            background-color: var(--icons-dark-back-color);
-                            color: var(--icons-dark-color) ;
-                            border-color: var(--icons-dark-border-color);
-                            &::before{
-                                color:var(--icons-dark-color);
-                            }
-                        }
-                        &.transparent{
-                            .header-btn__icon{
-                                background-color: transparent;
-                            } 
-                        }
+//                         .header-btn__icon{
+//                             background-color: var(--icons-dark-back-color);
+//                             color: var(--icons-dark-color) ;
+//                             border-color: var(--icons-dark-border-color);
+//                             &::before{
+//                                 color:var(--icons-dark-color);
+//                             }
+//                         }
+//                         &.transparent{
+//                             .header-btn__icon{
+//                                 background-color: transparent;
+//                             } 
+//                         }
 
                         
-                    }
+//                     }
                     
-                    a{
-                        color: inherit;
-                        &:hover{
-                            opacity: 0.8;
-                        }
-                    }                
-                    salla-cart-summary{
-                        .s-cart-summary-count{
-                            background-color:var(--color-dark-primary) ;
-                            color: var(--main-dark-text-color);
-                        }
-                    }
-                }
-            }
-            .bottom-navbar{
-                #bigMenu.main-menu{
-                    li{
-                        a{
-                            color: var(--color-dark-color-header);
-                            border-bottom: 2px solid transparent ;
-                        }
-                        a:hover{
-                            border-color: var(--color-dark-primary);
-                            opacity: 1;
-                        }
-                        .sub-menu{
-                            border-top: 0;
-                            color: var(--color-dark-color-header);
-                            background-color: var(--color-dark-back-header);
-                        }
-                    }
-                }
-            }
-        }
-    }
-  } 
+//                     a{
+//                         color: inherit;
+//                         &:hover{
+//                             opacity: 0.8;
+//                         }
+//                     }                
+//                     salla-cart-summary{
+//                         .s-cart-summary-count{
+//                             background-color:var(--color-dark-primary) ;
+//                             color: var(--main-dark-text-color);
+//                         }
+//                     }
+//                 }
+//             }
+//             .bottom-navbar{
+//                 #bigMenu.main-menu{
+//                     li{
+//                         a{
+//                             color: var(--color-dark-color-header);
+//                             border-bottom: 2px solid transparent ;
+//                         }
+//                         a:hover{
+//                             border-color: var(--color-dark-primary);
+//                             opacity: 1;
+//                         }
+//                         .sub-menu{
+//                             border-top: 0;
+//                             color: var(--color-dark-color-header);
+//                             background-color: var(--color-dark-back-header);
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//   } 
  
-}
+// }
 
 body:has(.home){
     .store-header:not(:has(.fixed-header)){
@@ -619,6 +627,26 @@ body:has(.home){
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // @media (max-width: 1400px){
 
 // }

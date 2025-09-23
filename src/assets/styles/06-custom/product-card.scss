@@ -1,0 +1,181 @@
+body{
+    .s-product-card-entry{
+        background-color:var(--card-back-color);
+        margin: 2px 0;
+        --rgba:var(--card-box-shadow-color-rgba);
+        box-shadow: 0px 0px 0px 2px var(--rgba);
+        -webkit-box-shadow: 0px 0px 0px 2px var(--rgba);
+        -moz-box-shadow: 0px 0px 0px 2px var(--rgba);
+        overflow: hidden;
+        .s-product-card-image{
+            background-color:transparent;
+            max-height: 250px;
+            // width: calc(100% - 16px);
+            // margin: 0 8px ;
+            // height: calc(100% - 8px);
+            // border-radius:10px;
+            a{
+               
+                .s-product-card-promotion-title{
+                    background-color: var(--promotion-back-color);
+                    color: var(--promotion-title-color);
+                    left: 4px;
+                    right: unset;
+                    padding: 3px 6px;
+                    border-radius: 8px;
+                    transform: rotate(-7.527deg);
+                }
+            }
+            .s-product-card-wishlist-btn{
+                right:4px;
+                left: unset;
+                top: 4px;
+                opacity: 1;
+                button{
+                    background-color: var(--wishlist-btn-back-color);
+                    i{
+                        color: var(--wishlist-btn-text-color);
+                    }
+                }
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+        .s-product-card-content{
+            padding: 12px 0 0 0 ;
+            .s-product-card-content-main{
+                padding: 0 12px;
+                margin-bottom: 10px;
+                .s-product-card-content-title{
+                    margin-bottom: 0px;
+                    a {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        color: var(--product-title-color);
+                        font-size:18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 120%; 
+                    }
+                }
+            }
+            
+            .s-product-card-content-sub{
+                padding: 0 12px;
+                margin-bottom: 10px;
+                h4{
+                    color: var(--product-price-color)!important;
+                    text-align: center;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 150%; 
+                }
+                .s-product-card-sale-price{
+                    span{
+                        color: var(--product-discount-price-color);
+                        text-align: center;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 150%; 
+                    }
+                }
+            }
+            .s-product-card-content-footer{
+                width: 100%;
+                gap: 0;
+                border-radius: 0 0 4px 4px;
+                .s-button-btn{
+                    border-radius: 0 ;
+                    background-color: var(--add-btn-back-color);
+                    color: var(--add-btn-text-color);
+                    border-color: var(--add-btn-back-color);
+                    padding-left: 12px;
+                    padding-right: 12px;
+                    height: 40px;
+                    .s-button-text{
+                            span{
+                                font-size: 16px;
+                                line-height: 20px;
+                                transition: all .2s ease-in-out;
+                            }
+                        }
+                    &:hover{
+                        background-color: var(--add-btn-back-color-hoverd);
+                        border-color: var(--add-btn-back-color-hoverd);
+                        opacity: 1;
+                        .s-button-text{
+                            span{
+                                line-height: 20px;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+body.dark-mode{
+    .s-product-card-entry{
+        background-color:var(--card-back-color-dark);
+        --rgba:var(--card-box-shadow-color-rgba-dark);
+        
+        .s-product-card-image{
+            background-color:transparent;
+            a{
+                .s-product-card-promotion-title{
+                    background-color: var(--promotion-back-color-dark);
+                    color: var(--promotion-title-color-dark);
+                }
+            }
+            .s-product-card-wishlist-btn{
+                button{
+                    background-color: var(--wishlist-btn-back-color-dark);
+                    i{
+                        color: var(--wishlist-btn-text-color-dark);
+                    }
+                }
+            }
+        }
+        .s-product-card-content{
+            .s-product-card-content-main{
+                .s-product-card-content-title{
+                    a {
+                        color: var(--product-title-color-dark);
+                    }
+                }
+                .s-product-card-content-subtitle{
+                    color: var(--product-subtitle-color-dark);
+                }
+            }
+           
+            .s-product-card-content-sub{
+                h4{
+                    color: var(--product-price-color-dark)!important;
+                }
+                .s-product-card-sale-price{
+                    span{
+                        color: var(--product-discount-price-color-dark); 
+                    }
+                }
+            }
+            .s-product-card-content-footer{
+                .s-button-btn{
+                    background-color: var(--add-btn-back-color-dark);
+                    color: var(--add-btn-text-color-dark);
+                    border-color: var(--add-btn-back-color-dark);
+                    &:hover{
+                        background-color: var(--add-btn-back-color-dark-hoverd);
+                        border-color: var(--add-btn-back-color-dark-hoverd);
+                    }
+                }
+            }
+        }
+    }
+}
