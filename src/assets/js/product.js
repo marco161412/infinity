@@ -87,3 +87,15 @@ class Product extends BasePage {
 }
 
 Product.initiateWhenReady(['product.single']);
+  document.addEventListener("DOMContentLoaded", function () {
+  var article = document.getElementById('articleContent');
+  var btn = document.getElementById('showMoreBtn');
+
+  if (!article || !btn) return; // تأكد من وجود العناصر
+
+  var textContent = article.innerText || article.textContent;
+
+  if (textContent.length > 250) {
+    btn.style.display = 'inline-block';
+  }
+});

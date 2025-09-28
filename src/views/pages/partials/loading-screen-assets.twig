@@ -1,51 +1,58 @@
 <!-- To eliminate all render blocking CSS & JS and start with the critical css-->
 <!-- To show loader to the user till the page content are  loaded-->
 <style>
-  .loader-init {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: white;
-      transition: opacity 0.75s, visibility 0.75s;
-      z-index: 9999;
+  body .parent-loader{
+    background: var(--color-background-body);
   }
+  body.dark-mode .parent-loader{
+    background: var(--color-dark-background-body);
+  }
+.parent-loader {
+  position: fixed;
+  z-index: 999999999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.loader-card{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
 
-  .loader-init--hidden {
-      opacity: 0;
-      visibility: hidden;
-  }
+.loader-1 {
+  width: 120px;
+  height: 20px;
+  -webkit-mask: radial-gradient(circle closest-side, #000 94%, #0000) left/20% 100%;
+  background: linear-gradient(var(--color-primary) 0 0) left/0% 100% no-repeat #ddd;
+  animation: l17 1s infinite steps(6);
+}
 
-  .loader-init::after {
-      content: "";
-      width: 36px;
-      height: 36px;
-      border: 3px solid #eee;
-      border-top-color: #5bd5c4;
-      border-radius: 50%;
-      animation: loading 0.75s ease infinite;
+@keyframes l17 {
+  100% {
+    background-size: 120% 100%
   }
-
-  @keyframes loading {
-      from {
-        transform: rotate(0turn);
-      }
-      to {
-        transform: rotate(1turn);
-      }
-  }
+}
+.gap10{
+  gap:10px!important
+}
 </style>
-<script>
-  window.addEventListener("load", () => {
-    const loader = document.querySelector(".loader-init");
-    loader?.classList.add("loader-init--hidden");
-    loader?.addEventListener("transitionend", () => {
-  if (!document.querySelector(".loader-init")) return;
-      document.body.removeChild(loader);
-      });
-  });
+ <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const loader = document.getElementById("parent-loader");
+    if (loader) {
+        loader.style.display = "block";
+        setTimeout(() => loader.style.display = "none", 800);
+    }
+});
+
 </script>

@@ -759,7 +759,427 @@
             "required": false,
             "value": false,
             "selected": false
+        },{
+            "id": "product_details_title",
+            "type": "static",
+            "format": "description",
+            "label": "صفحة المنتج",
+            "value": "<h5 class='bg-primary flex items-center p-4 mb-8 text-white rounded-lg'><i class='sicon-shopping-bag ml-3 text-secondary text-xl'></i>خيارات صفحة المنتج</h5>",
+            "variant": "h1",
+            "icon": "sicon-format-size",
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "product_details_border_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون حواف العناصر ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#e5e7eb",
+            "required": false,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "product_details_border_color_dark",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون حواف العناصر ",
+            "description": "فى الوضع المظلم",
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#FF4C4C",
+            "required": false,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "brand_text",
+            "type": "string",
+            "format": "text",
+            "label": "اضافة عنوان بجانب صورة الماركة",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": null,
+            "icon": "sicon-format-text-alt",
+            "value": "أصلي 100%",
+            "multilanguage": true,
+            "required": false,
+            "minLength": 2,
+            "maxLength": 255,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "اظهار الوسوم",
+            "description": null,
+            "id": "show_tags",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": true,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "slider_background_size",
+            "type": "items",
+            "format": "dropdown-list",
+            "label": "طريقة عرض الصور في سليدر صور المنتج",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-list",
+            "selected": [
+                {
+                    "label": "اظهار الصورة كاملةً في المنتصف (Contain)",
+                    "value": "contain",
+                    "key": "f4adec13-6e4c-433b-b141-b2807935ced9"
+                }
+            ],
+            "options": [
+                {
+                    "label": "تغطية الصورة كامل المساحة مع المحافظة على النسبة الصورة (Cover)",
+                    "value": "cover",
+                    "key": "e9c8ea8f-c5c6-438e-9d45-3bce269afde4"
+                },
+                {
+                    "label": "اظهار الصورة كاملةً في المنتصف (Contain)",
+                    "value": "contain",
+                    "key": "f4adec13-6e4c-433b-b141-b2807935ced9"
+                }
+            ],
+            "source": "Manual",
+            "required": true,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "تكبير الصور في سليدر صور المنتج",
+            "description": "هذه الخاصية تمكنك من تكبير الصورة لتسهل رؤية المزيد من التفاصيل بها",
+            "id": "imageZoom",
+            "format": "switch",
+            "required": false,
+            "value": false,
+            "selected": false,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "اخفاء نص الاستبدال",
+            "description": null,
+            "id": "remove_warning_msg",
+            "format": "switch",
+            "required": false,
+            "value": false,
+            "selected": false,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "warning_msg",
+            "type": "string",
+            "format": "text",
+            "label": "نص الاستبدال",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "خصومات تصل إلى 50% لفترة محدودة",
+            "icon": "sicon-format-text-alt",
+            "value": "خصومات تصل إلى 50% لفترة محدودة",
+            "multilanguage": true,
+            "required": false,
+            "minLength": 2,
+            "maxLength": 255,
+            "conditions": [
+                {
+                    "id": "remove_warning_msg",
+                    "operation": "=",
+                    "value": false
+                }
+            ],
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "safe_msg",
+            "type": "string",
+            "format": "text",
+            "label": "نص الأمان",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "تسوق آمن، بياناتك محمية دائمًا",
+            "icon": "sicon-format-text-alt",
+            "value": "تسوق آمن، بياناتك محمية دائمًا",
+            "multilanguage": true,
+            "required": false,
+            "minLength": 2,
+            "maxLength": 255,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "original_msg",
+            "type": "string",
+            "format": "text",
+            "label": "النص المراد وضعة فى صفحة المنتج",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "اكتب النص هنا ...",
+            "icon": "sicon-format-text-alt",
+            "value": "أصلى ١٠٠%",
+            "multilanguage": true,
+            "required": false,
+            "minLength": 2,
+            "maxLength": 255,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "اخفاء المنتجات المشابهة",
+            "description": null,
+            "id": "remove_related_products",
+            "format": "switch",
+            "required": false,
+            "value": false,
+            "selected": false,
+            "groups": [
+                "product_details_page"
+            ]
+        },{
+            "id": "product_details_title",
+            "type": "static",
+            "format": "description",
+            "label": "صفحة المنتج",
+            "value": "<h5 class='bg-primary flex items-center p-4 mb-8 text-white rounded-lg'><i class='sicon-shopping-bag ml-3 text-secondary text-xl'></i>خيارات صفحة المنتج</h5>",
+            "variant": "h1",
+            "icon": "sicon-format-size",
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "product_details_border_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون حواف العناصر ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#e5e7eb",
+            "required": false,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "product_details_border_color_dark",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون حواف العناصر ",
+            "description": "فى الوضع المظلم",
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#FF4C4C",
+            "required": false,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "brand_text",
+            "type": "string",
+            "format": "text",
+            "label": "اضافة عنوان بجانب صورة الماركة",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": null,
+            "icon": "sicon-format-text-alt",
+            "value": "أصلي 100%",
+            "multilanguage": true,
+            "required": false,
+            "minLength": 2,
+            "maxLength": 255,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "اظهار الوسوم",
+            "description": null,
+            "id": "show_tags",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": true,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "slider_background_size",
+            "type": "items",
+            "format": "dropdown-list",
+            "label": "طريقة عرض الصور في سليدر صور المنتج",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-list",
+            "selected": [
+                {
+                    "label": "اظهار الصورة كاملةً في المنتصف (Contain)",
+                    "value": "contain",
+                    "key": "f4adec13-6e4c-433b-b141-b2807935ced9"
+                }
+            ],
+            "options": [
+                {
+                    "label": "تغطية الصورة كامل المساحة مع المحافظة على النسبة الصورة (Cover)",
+                    "value": "cover",
+                    "key": "e9c8ea8f-c5c6-438e-9d45-3bce269afde4"
+                },
+                {
+                    "label": "اظهار الصورة كاملةً في المنتصف (Contain)",
+                    "value": "contain",
+                    "key": "f4adec13-6e4c-433b-b141-b2807935ced9"
+                }
+            ],
+            "source": "Manual",
+            "required": true,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "تكبير الصور في سليدر صور المنتج",
+            "description": "هذه الخاصية تمكنك من تكبير الصورة لتسهل رؤية المزيد من التفاصيل بها",
+            "id": "imageZoom",
+            "format": "switch",
+            "required": false,
+            "value": false,
+            "selected": false,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "اخفاء نص الاستبدال",
+            "description": null,
+            "id": "remove_warning_msg",
+            "format": "switch",
+            "required": false,
+            "value": false,
+            "selected": false,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "warning_msg",
+            "type": "string",
+            "format": "text",
+            "label": "نص الاستبدال",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "خصومات تصل إلى 50% لفترة محدودة",
+            "icon": "sicon-format-text-alt",
+            "value": "خصومات تصل إلى 50% لفترة محدودة",
+            "multilanguage": true,
+            "required": false,
+            "minLength": 2,
+            "maxLength": 255,
+            "conditions": [
+                {
+                    "id": "remove_warning_msg",
+                    "operation": "=",
+                    "value": false
+                }
+            ],
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "safe_msg",
+            "type": "string",
+            "format": "text",
+            "label": "نص الأمان",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "تسوق آمن، بياناتك محمية دائمًا",
+            "icon": "sicon-format-text-alt",
+            "value": "تسوق آمن، بياناتك محمية دائمًا",
+            "multilanguage": true,
+            "required": false,
+            "minLength": 2,
+            "maxLength": 255,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "id": "original_msg",
+            "type": "string",
+            "format": "text",
+            "label": "النص المراد وضعة فى صفحة المنتج",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "اكتب النص هنا ...",
+            "icon": "sicon-format-text-alt",
+            "value": "أصلى ١٠٠%",
+            "multilanguage": true,
+            "required": false,
+            "minLength": 2,
+            "maxLength": 255,
+            "groups": [
+                "product_details_page"
+            ]
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "اخفاء المنتجات المشابهة",
+            "description": null,
+            "id": "remove_related_products",
+            "format": "switch",
+            "required": false,
+            "value": false,
+            "selected": false,
+            "groups": [
+                "product_details_page"
+            ]
         }
+        
+        
     ],
     "components": [
         {

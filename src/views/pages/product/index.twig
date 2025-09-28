@@ -18,61 +18,133 @@
 #}
 {% extends "layouts.master" %}
 {% block content %}
-    <div class="container px-2.5 ms:px-5 mb-10">
-        {# add breadcumbs container in pages to make a space in case breadcrumbs is off #}
-        <nav class="breadcrumbs w-full py-5">
-            <salla-breadcrumb></salla-breadcrumb>
-        </nav>
-        <div class="flex items-start flex-col md:flex-row">
-            {% if filters %}
-                <button class="btn--close-sm close-filters sicon-cancel hidden"></button>
-                <salla-filters class="md:w-72 lg:sticky lg:top-20 flex-none" id="filters-menu"></salla-filters>
-            {% endif %}
+	{% set main_categories = theme.settings.get('main_categories') %}
+	<div
+		class="container-sec px-2.5 ms:px-5 mb-10 category-sec">
+		{# add breadcumbs container in pages to make a space in case breadcrumbs is off #}
+		<nav class="breadcrumbs w-full py-5">
+			<salla-breadcrumb></salla-breadcrumb>
+		</nav>
+		<div class="offers-banners {{grid_banners_in_offers?" column":" "}}">
+			{% if theme.settings.get('offers_img') %}
+				<div class="offers-banner">
+					<img class="img" src="{{ theme.settings.get('offers_img')}}"/>
+				</div>
+			{% endif %}
+			{% if theme.settings.get('offers_img2') %}
+				<div class="offers-banner">
+					<img class="img" src="{{ theme.settings.get('offers_img2')}}"/>
+				</div>
+			{% endif %}
+		</div>
+		{% for item in theme.settings.get('categories_items') %}
 
-            <div class="main-content flex-1 w-full {{ filters ? 'ltr:lg:ml-8 rtl:lg:mr-8' : '' }}">
-                <div class="mb-4 sm:mb-6 flex justify-between items-center">
-                    <h1 class="font-bold text-xl rtl:pl-3 ltr:pr-3" id="page-main-title">{{ page.title|raw }}</h1>
-                    <div class="flex items-center space-x-2 rtl:space-x-reverse">
-                        {% if filters %}
-                            <a href="#filters-menu"
-                               class="filters-trigger bg-border-color text-primary lg:hidden mt-2">
-                                <i class="sicon-filter text-gray-text text-2xl me-2.5"></i>
-                            </a>
-                        {% endif %}
-                        {% if sort_options|length %}
-                            <div class="flex items-center">
-                                <label class="hidden sm:block rtl:ml-3 ltr:mr-3 whitespace-nowrap"
-                                       for="product-filter">{{ trans('pages.categories.sorting') }}</label>
-                                <select id="product-filter" class="form-input pt-0 pb-1 rtl:md:pl-10 ltr:md:pr-10">
-                                    {% for sort in sort_options %}
-                                        <option value="{{ sort.id }}" {{ sort.is_selected?'selected':'' }}>{{ sort.name }}</option>
-                                    {% endfor %}
-                                </select>
-                            </div>
-                        {% endif %}
-                    </div>
+			{% if item.category_products[0].value == category.id %}
+				<div class="category-banners {{item.grid_category_banners?" column":" "}}">
+					{% if item.category_image %}
+						<div class="category-banner">
+							<img class="img" src="{{ item.category_image}}"/>
+						</div>
+					{% endif %}
+					{% if item.category_image2 %}
+						<div class="category-banner">
+							<img class="img" src="{{ item.category_image2}}"/>
+						</div>
+					{% endif %}
+				</div>
 
-                </div>
+			{% endif %}
+		{% endfor %}
+		{# <div id="categories-container" class="categories-grid">
+		</div> #}
+		
+		{% if theme.settings.get('display_sub_category') %}
+			{% if theme.settings.get('grid_sub_category') %}
+				{% if category.sub_categories %}
+					<div class="sub-categories-flex">
+						{% for category_item in category.sub_categories %}
 
-                {% hook 'product:index.items.start' %}
-                <div class="flex min-h-screen">
-                    <salla-products-list class="flex-1 min-w-0 overflow-auto "
-                        source="{{ page.slug }}"
-                        source-value="{{ page.id }}"
-                        {{ filters ?'filters-Results':'' }}>
-					          </salla-products-list>
-                </div>
-                {% hook 'product:index.items.end' %}
-            </div>
-        </div>
-    </div>
+							<a href="{{category_item.url}}" class="sub-category-item">
+								<div class="img-parent">
+									<img class="img" src="{{category_item.image}}">
+								</div>
+								<div class="text-parent">
+									<h2 class="title">{{category_item.name}}</h2>
+								</div>
+							</a>
+						{% endfor %}
+					</div>
+				{% endif %}
+			{% else %}
+				{% if category.sub_categories %}
+					<salla-slider type="carousel" class="sub-categories" auto-play show-controls="false" id="sub-categories{{ position }}-slider">
+						<div slot="items">
+							{% for category_item in category.sub_categories %}
+								<div class="swiper-slide">
+									<a href="{{category_item.url}}" class="sub-category-item">
+										<div class="img-parent">
+											<img class="img" src="{{category_item.image}}">
+										</div>
+										<div class="text-parent">
+											<h2 class="title">{{category_item.name}}</h2>
+										</div>
+									</a>
+								</div>
+							{% endfor %}
+						</div>
+					</salla-slider>
+				{% endif %}
+			{% endif %}
+			{% if category.sub_categories %}
+				<div class="line"></div>
+			{% endif %}
+		{% endif %}
+
+		{# <div class="cats-list-wrap-inner"></div> #}
+		<div class="flex items-start flex-col md:flex-row products-filters">
+			{% if filters %}
+				<button class="btn--close-sm close-filters sicon-cancel hidden"></button>
+				<salla-filters class="md:w-72 lg:sticky lg:top-20 flex-none" id="filters-menu"></salla-filters>
+			{% endif %}
+
+			<div class="main-content flex-1 w-full {{ filters ? 'ltr:lg:ml-8 rtl:lg:mr-8' : '' }}">
+				<div class="mb-4 sm:mb-6 flex justify-between items-center">
+					<h1 class="font-bold text-xl rtl:pl-3 ltr:pr-3" id="page-main-title">{{ page.title|raw }}</h1>
+					<div class="flex items-center space-x-2 rtl:space-x-reverse ">
+						{% if filters %}
+							<a href="#filters-menu" class="filters-trigger bg-border-color text-primary lg:hidden mt-2">
+								<i class="sicon-filter text-gray-text text-2xl me-2.5"></i>
+							</a>
+						{% endif %}
+						{% if sort_options|length %}
+							<div class="flex items-center">
+								<label class="hidden sm:block rtl:ml-3 ltr:mr-3 whitespace-nowrap" for="product-filter">{{ trans('pages.categories.sorting') }}</label>
+								<select id="product-filter" class="form-input pt-0 pb-1 rtl:md:pl-10 ltr:md:pr-10">
+									{% for sort in sort_options %}
+										<option value="{{ sort.id }}" {{ sort.is_selected?'selected':'' }}>{{ sort.name }}</option>
+									{% endfor %}
+								</select>
+							</div>
+						{% endif %}
+					</div>
+
+				</div>
+
+				{% hook 'product:index.items.start' %}
+				<div class="flex min-h-screen">
+					<salla-products-list product-card-component='custom-salla-product-card' class="flex-1 min-w-0  " source="{{ page.slug }}" source-value="{{ page.id }}" {{ filters ?'filters-Results':'' }}></salla-products-list>
+				</div>
+				{% hook 'product:index.items.end' %}
+			</div>
+		</div>
+	</div>
 
 
-    {% if store.settings.category.testimonial_enabled %}
-        {% component 'home.testimonials' %}
-    {% endif %}
+	{% if store.settings.category.testimonial_enabled %}
+		{% component 'home.testimonials' %}
+	{% endif %}
 {% endblock %}
 
 {% block scripts %}
-    <script defer src="{{ 'product.js' | asset }}"></script>
+	<script defer src="{{ 'product.js' | asset }}"></script>
 {% endblock %}
