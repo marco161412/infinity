@@ -1,108 +1,241 @@
-
-.store-footer{
-     background-color: var(--background-footer-color,#f3f4f6);
-    .store-footer__inner{
-        background-color: var(--background-footer-color,#f3f4f6);
-        .footer-div{
-            display: flex;
-            .footer-item{
-                width: 25%;
-                padding-left: 15px;
-                h3,h4{
-                    color:  var(--color-text-footer,#374152) ;
-                }
-                .footer-desc{
-                    color: var(--color-text-footer,#374152);
-                    
-                }
-                .s-contacts{
-                  .s-contacts-list{
-                    .s-contacts-item{
-                        color: var(--color-text-footer,#374152);
-                        opacity: 0.8;
-                    }
-                  }  
-                }
-                .s-menu-footer-list{
-                    .s-menu-footer-item{
-                        color: var(--color-text-footer,#374152);
-                        opacity: 0.8;
-                    }
-                }
-                .logo-footer{
-                    margin-bottom: 10px;
-                    width: auto;
-                    display: inline-block;
-                        img{
-                            max-width: 100%;
-                            max-height: 85px;
-                            -o-object-fit: contain;
-                            object-fit: contain; 
-                        }
-                }
-                
-                .s-menu-footer-list{
+/* footer */
+body{
+        .store-footer{
+            border-radius:20% 20% 0% 0% / 25% 25% 0% 0% ;
+            overflow: hidden;
+            background-color: var(--color-back-footer);
+            .store-footer__inner{
+                border-color: var(--stroke-light);
+                background-color: var(--color-back-footer);
+                .footer-div{
                     display: flex;
-                    gap: 10px;
-                    flex-direction: column;
-                    a{
-                        margin-bottom: 0;
-                        display: flex;
-                        font-size: 16px;
-                    }
-                    a:before{
-                        content:"\e970";
-                        font-family: "sallaicons" !important;
-                        line-height: 100%;
+                    .footer-item{
+                        width: 25%;
+                        padding-left: 15px;
+                        h3,h4{
+                            color: var(--color-main-text-footer);
+                        }
+                        .description-p{
+                            color: var(--color-text-footer);
+                        }
+                        .logo-footer{
+                            margin-bottom: 10px;
+                            width: auto;
+                            display: inline-block;
+                                img{
+                                    max-width: 140px;
+                                    max-height: 85px;
+                                    -o-object-fit: contain;
+                                    object-fit: contain; 
+                                }
+                        }
                         
+                        .s-menu-footer-list{
+                            display: flex;
+                            gap: 10px;
+                            flex-direction: column;
+                            a{
+                                margin-bottom: 0;
+                                display: flex;
+                                font-size: 16px;
+                                color: var(--color-text-footer);
+                            }
+                            a:before{
+                                content:"\e970";
+                                font-family: "sallaicons" !important;
+                                line-height: 100%;
+                                color: var(--color-icon-footer);
+                                
 
-                    }
-                    a:hover{
-                        color: var(--color-primary-dark);
-                    }
-                    
-                }
-                .s-social-list{
-                    flex-wrap: wrap;
-                    gap: 5px;
-                    a{
-                        width: 40px;
-                        height: 40px;
-                        border-color: var(--color-primary-dark);
-                        background-color: var(--color-primary);
-                        svg{
-                            fill:var(--color-primary-reverse);
-                            height: 20px;
-                            width: 20px;
+                            }
+                            a:hover{
+                                color: var(--color-hover-footer);
+                            }
                             
                         }
+                        salla-contacts{
+                            .s-contacts-list{
+                                gap: 10px;
+                                .s-contacts-item{
+                                    .s-contacts-icon{
+                                        svg{
+                                            fill:var(--color-text-footer);
+                                        }
+                                    }
+                                    .unicode{
+                                        color: var(--color-text-footer);
+                                    }
+                                    &:hover{
+                                        color: var(--color-hover-footer);
+                                        .s-contacts-icon{
+                                            svg{
+                                                fill:var(--color-hover-footer);
+                                            }
+                                        }
+                                        .unicode{
+                                            color:var(--color-hover-footer)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        salla-social{
+                            .s-social-list{
+                                flex-wrap: wrap;
+                                gap: 5px;
+                                .s-social-link{
+                                    a{
+                                        width: 40px;
+                                        height: 40px;
+                                        
+                                        .s-social-icon{
+                                            border-color: var(--color-border-footer);
+                                            svg{
+                                                fill:var(--color-icon-footer);
+                                                height: 20px;
+                                                width: 20px;
+                                            }
+                                        }
+                                        &:hover{
+                                            .s-social-icon{
+                                                svg{
+                                                    fill:var(--color-hover-footer);
+                                                    
+                                                }
+                                            }  
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
+                        .contact-social{
+                            padding-top: 0px;
+                            margin-top: 0px;
+                            border: 0;
+                        }
                     }
-                }
-                .s-contacts-list{
-                    gap: 10px;
-                    a{
+                    .footer-item:last-of-type{
+                        padding-left: 0px;
 
                     }
-                    a:hover{
-                        color: var(--color-primary-dark);
+                }
+            }
+            .copyright{
+                background-color: var(--color-back-footer);
+                .copyright-text{
+                    p{
+                        color: var(--color-text-footer);
+                        a{
+                            color: var(--color-main-text-footer);
+                            &:hover{
+                                color: var(--color-hover-footer);
+                            }
+                        }
                     }
                 }
-                .contact-social{
-                    padding-top: 0px;
-                    margin-top: 0px;
-                }
             }
-            .footer-item:last-of-type{
-                padding-left: 0px;
-
-            }
+            
         }
-        
-    } 
-    .copyright-text{
-            p{
-                color: var(--color-text-footer,#374152);
+}
+body.dark-mode{
+        .store-footer{
+            background-color: var(--color-dark-back-footer);
+            .store-footer__inner{
+                border-color: var(--stroke-dark);
+                background-color: var(--color-dark-back-footer);
+                .footer-div{
+                    display: flex;
+                    .footer-item{
+                        h3,h4{
+                            color: var(--color-dark-main-text-footer);
+                        }
+                        .description-p{
+                            color: var(--color-dark-text-footer);
+                        }
+                        .s-menu-footer-list{
+                            a{
+                                color: var(--color-dark-text-footer);
+                            }
+                            a:before{
+                                color: var(--color-dark-icon-footer);
+                            }
+                            a:hover{
+                                color: var(--color-dark-hover-footer);
+                            }
+                            
+                        }
+                        salla-contacts{
+                            .s-contacts-list{
+                                .s-contacts-item{
+                                    .s-contacts-icon{
+                                        svg{
+                                            fill:var(--color-dark-text-footer);
+                                        }
+                                    }
+                                    .unicode{
+                                        color: var(--color-dark-text-footer);
+                                    }
+                                    &:hover{
+                                        color: var(--color-dark-hover-footer);
+                                        .s-contacts-icon{
+                                            svg{
+                                                fill:var(--color-dark-hover-footer);
+                                            }
+                                        }
+                                        .unicode{
+                                            color:var(--color-dark-hover-footer)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        salla-social{
+                            .s-social-list{
+                                .s-social-link{
+                                    a{
+                                        .s-social-icon{
+                                            border-color: var(--color-dark-border-footer);
+                                            svg{
+                                                fill:var(--color-dark-icon-footer);
+                                                
+                                            }
+                                        }
+                                        &:hover{
+                                            .s-social-icon{
+                                                svg{
+                                                    fill:var(--color-dark-hover-footer);
+                                                    
+                                                }
+                                            }  
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
+                        
+                    }
+                   
+                }
             }
+            .copyright{
+                background-color: var(--color-dark-back-footer);
+                .copyright-text{
+                    p{
+                        color: var(--color-dark-text-footer);
+                        a{
+                            color: var(--color-dark-main-text-footer);
+                            &:hover{
+                                color: var(--color-dark-hover-footer);
+                            }
+                        }
+                    }
+                }
+            }
+            
         } 
 }
 
@@ -112,12 +245,11 @@
 
 
 
-
-
-
 /*768*/
  @media (max-width: 768px){
-    .store-footer{
+    body{
+        .store-footer{
+            border-radius: 15% 15% 0% 0% / 15% 15% 0% 0%;
             .store-footer__inner{
                 .footer-div{
                     flex-wrap: wrap;
@@ -129,21 +261,30 @@
                 }
             }
         }
+    }
 }
 
 
  @media (max-width: 450px){
-.store-footer{
-        .store-footer__inner{
-            .footer-div{
-                        flex-wrap: wrap;
-                        row-gap: 20px;
-                        .footer-item{
-                            width: 100%;
-                            padding-left: 12px;
+        body{
+                .store-footer{
+                    border-radius: 10% 10% 0% 0% / 10% 10% 0% 0%;
+                    .store-footer__inner{
+                        .footer-div{
+                            flex-wrap: wrap;
+                            row-gap: 20px;
+                            .footer-item{
+                                width: 100%;
+                                padding-left: 12px;
+                                salla-apps-icons{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                }
+                            }
                         }
                     }
-        }
-       
-    }
+                }
+            }
+    
 }

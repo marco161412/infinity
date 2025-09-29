@@ -1,6 +1,7 @@
-/* customer */
+/* customer true*/
 body{
     .customer-sec{
+        
         .sidebar{
             background-color:var(--color-secondary)!important;
         }
@@ -76,84 +77,152 @@ body{
                 }
             }
         }
+        salla-orders{
+           .s-orders-wrapper{
+             .s-orders-table{
+                .s-orders-table-head{
+                    background-color: var(--color-secondary);
+                    color: var(--secondary-text-color);
+                    .s-orders-table-head-tr{
+                        .s-orders-table-head-tr-th{
+
+                        }
+                    }
+                }
+                .s-orders-table-tbody{
+                    .s-orders-table-tbody-tr{
+                        .s-orders-table-tbody-tr-td{
+                            background-color: var(--color-secondary);
+                            color: var(--secondary-text-color);
+                            border:none;
+                            .s-orders-table-tbody-tr-td-content{
+                                span{
+                                    &.s-orders-mobile-title{
+
+                                    }
+                                    &.s-orders-status-container{
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+             }
+           } 
+        }
         
     }
-    &.dark-mode{
-        .customer-sec{
-            .sidebar{
-                background-color:var(--color-dark-secondary)!important;
+}
+body.dark-mode{
+    .customer-sec{
+        .sidebar{
+            background-color:var(--color-dark-secondary)!important;
+        }
+        .s-user-profile-field-label{
+            color:var(--main-dark-text-color);
+        }
+        
+        salla-notifications{
+            .s-notifications-wrapper{
+                .s-notifications-container{
+                    salla-notification-item{
+                        .s-notifications-item{
+                           background-color:var(--color-dark-secondary);
+                           .s-notifications-item-content{
+
+                           }
+                           color: var(--secondary-dark-text-color);
+                        }
+                    }
+                }
             }
-            .s-user-profile-field-label{
+        }
+        salla-user-settings{
+            .s-user-settings-section{
+                background-color: var(--color-dark-secondary);
                 color:var(--main-dark-text-color);
-            }
-            
-            salla-notifications{
-                .s-notifications-wrapper{
-                    .s-notifications-container{
-                        salla-notification-item{
-                            .s-notifications-item{
-                            background-color:var(--color-dark-secondary);
-                            .s-notifications-item-content{
-
+                border-color: var(--stroke-dark);
+                salla-list-tile{
+                    .s-list-tile-item{
+                        .s-list-tile-item-icon{
+                                .s-user-settings-section-icon{
+                                    svg{
+                                        fill:var(--secondary-dark-text-color);
+                                    }
+                                }
                             }
-                            color: var(--secondary-dark-text-color);
+                        .s-list-tile-item-content{
+                            
+                            .s-list-tile-item-title{
+                                .s-user-settings-section-title{
+                                    color:var(--secondary-dark-text-color);
+                                }
+                            }
+                            .s-list-tile-item-subtitle{
+                                .s-user-settings-section-subtitle{
+                                    color:var(--secondary-dark-text-color);
+                                    opacity: 0.8;
+                                }
                             }
                         }
                     }
                 }
+                
             }
-            salla-user-settings{
-                .s-user-settings-section{
+        }
+        salla-user-profile{
+            .s-user-profile-wrapper{
+                .s-user-profile-field{
+                    input{
+                        background-color:  var(--color-dark-secondary) ;
+                        border-color: var(--stroke-dark);
+                    }
+                    
+                }
+            }
+            .s-user-profile-submit{
+                .s-button-btn{
+                    color: var(--color-dark-text-primary);
+                    background-color: var(--color-dark-primary);
+                    border-color: var(--color-dark-primary);
+                }
+                
+
+            }
+        }
+         salla-orders{
+           .s-orders-wrapper{
+             .s-orders-table{
+                .s-orders-table-head{
                     background-color: var(--color-dark-secondary);
-                    color:var(--main-dark-text-color);
-                    border-color: var(--stroke-dark);
-                    salla-list-tile{
-                        .s-list-tile-item{
-                            .s-list-tile-item-content{
-                                .s-list-tile-item-icon{
-                                    .s-user-settings-section-icon{
-                                        svg{
-                                            fill:var(--secondary-dark-text-color);
-                                        }
+                    color: var(--secondary-dark-text-color);
+                    .s-orders-table-head-tr{
+                        .s-orders-table-head-tr-th{
+                            padding:12px
+                        }
+                    }
+                }
+                .s-orders-table-tbody{
+                    .s-orders-table-tbody-tr{
+                        .s-orders-table-tbody-tr-td{
+                            background-color: var(--color-dark-secondary);
+                            color: var(--secondary-dark-text-color);
+                            .s-orders-table-tbody-tr-td-content{
+                                span{
+                                    &.s-orders-mobile-title{
+
                                     }
-                                }
-                                .s-list-tile-item-title{
-                                    .s-user-settings-section-title{
-                                        color:var(--secondary-dark-text-color);
-                                    }
-                                }
-                                .s-list-tile-item-subtitle{
-                                    .s-user-settings-section-subtitle{
-                                        color:var(--secondary-dark-text-color);
-                                        opacity: 0.8;
+                                    &.s-orders-status-container{
+
                                     }
                                 }
                             }
                         }
                     }
-                    
                 }
-            }
-            salla-user-profile{
-                .s-user-profile-wrapper{
-                    .s-user-profile-field{
-                        input{
-                            background-color:  var(--color-dark-secondary) ;
-                            border-color: var(--stroke-dark);
-                        }
-                        
-                    }
-                }
-                .s-user-profile-submit{
-                    .s-button-btn{
-                        color: var(--color-dark-text-primary);
-                        background-color: var(--color-dark-primary);
-                        border-color: var(--color-dark-primary);
-                    }
-                    
-
-                }
-            }
+             }
+           } 
         }
     }
 }

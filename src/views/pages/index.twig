@@ -7,7 +7,9 @@
 #}
 {% extends "layouts.master" %}
 {% block content %}
-    {% component home %}
+    <div class="home {{theme.settings.get('first_section_have_not_margin')?'no-margin':''}}">
+        {% component home %}
+    </div>
 {% endblock %}
 {% block scripts %}
     <script defer src="{{ 'home.js' | asset }}"></script>
