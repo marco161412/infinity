@@ -111,9 +111,11 @@
 								<i class="sicon-location header-btn__icon rtl:ml-1 ltr:mr-1"></i> {{ store.scope.name }}
 							</button>
 						{% endif %}
-						<button class="header-btn setting-btn open-settings-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
-								<i class="header-btn__icon sicon-settings"></i>
-						</button>
+						{% if not hide_settings %}
+							<button class="header-btn setting-btn open-settings-btn {{ icon_back_transparent ? 'transparent' : '' }} {{ icon_is_circle ? 'circle' : '' }}">
+									<i class="header-btn__icon sicon-settings"></i>
+							</button>
+						{% endif %}
 					</div>
 				</div>
 				{% if navbar %}
