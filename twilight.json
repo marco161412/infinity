@@ -1177,9 +1177,156 @@
             "groups": [
                 "product_details_page"
             ]
+        },
+        {
+            "id": "setting_title",
+            "type": "static",
+            "format": "description",
+            "label": "خيارات الألوان الاساسية",
+            "value": "<h5 class=\"bg-primary flex items-center p-4 mb-8 text-white rounded-lg\"><i class=\"sicon-art-palette ml-3 text-secondary text-xl\"></i>خيارات الألوان الاساسية</h5>",
+            "variant": "h1",
+            "icon": "sicon-format-size"
+            
+        },
+        {
+            "id": "light_body_bacground",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون خلفية الثيم ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#f9fafb",
+            "required": false
+            
+        },
+        {
+            "id": "main_body_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون نص الثيم ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#231f1e",
+            "required": false
+            
+        },
+        {
+            "id": "dark_body_bacground",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون خلفية الثيم ",
+            "description": "فى الوضع المظلم",
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#0D0623",
+            "required": false
+            
+        },
+        {
+            "id": "dark_main_body_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون نص الثيم ",
+            "description": "فى الوضع المظلم",
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#ffffff",
+            "required": false
+            
+        },
+        {
+            "id": "dark_primary_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون الزر الاساسي ",
+            "description": "فى الوضع المظلم",
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#140051",
+            "required": false
+            
+        },
+        {
+            "id": "dark_primary_text_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون نص الزر الاساسي ",
+            "description": "فى الوضع المظلم",
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#FFFFFF",
+            "required": false
+            
+        },
+        {
+            "id": "secondary_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون ثانوى للثيم ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#f3f4f6",
+            "required": false
+            
+        },
+        {
+            "id": "secondary_text_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون نص ثانوى ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#212121",
+            "required": false
+        },
+        {
+            "id": "dark_secondary_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون ثانوى للثيم ",
+            "description": "فى الوضع المظلم",
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#160e31",
+            "required": false
+        },
+        {
+            "id": "dark_secondary_text_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون نص ثانوى ",
+            "description": "فى الوضع المظلم",
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#FFFFFF",
+            "required": false
+        },
+        {
+            "id": "stroke_color_dark",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون حواف الثيم ",
+            "description": "فى الوضع المظلم",
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#272727",
+            "required": false
         }
-        
-        
     ],
     "components": [
         {
