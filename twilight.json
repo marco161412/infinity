@@ -140,10 +140,7 @@
             "label": "أعلى الصفحة",
             "value": "<h5 class='bg-primary flex items-center p-4 mb-8 text-white rounded-lg'><i class='sicon-archive-upload ml-3 text-secondary text-xl'></i>خيارات أعلى الصفحة</h5>",
             "variant": "h1",
-            "icon": "sicon-format-size",
-            "groups": [
-                "setting_all"
-            ]
+            "icon": "sicon-format-size"
         },
         {
             "type": "boolean",
@@ -1144,6 +1141,193 @@
             "id": "setting_title",
             "type": "static",
             "format": "description",
+            "label": "الاعدادات العامة",
+            "value": "<h5 class=\"bg-primary flex items-center p-4 mb-8 text-white rounded-lg\"><i class=\"sicon-settings ml-3 text-secondary text-xl\"></i>اعدادت عامة</h5>",
+            "variant": "h1",
+            "icon": "sicon-format-size"
+        },
+        {
+            "id": "theme_default",
+            "type": "items",
+            "format": "dropdown-list",
+            "label": "القيمة الافتراضيه للثيم",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-list",
+            "selected": [
+                {
+                    "label": "الوضع النهاري (light)",
+                    "value": "light",
+                    "key": "f4adec13-6e4c-433b-b141-b28044ced9"
+                }
+            ],
+            "options": [
+                {
+                    "label": "الوضع النهاري (light)",
+                    "value": "light",
+                    "key": "f4adec13-6e4c-433b-b141-b28044ced9"
+                },
+                {
+                    "label": "الوضع اليلي (dark)",
+                    "value": "dark",
+                    "key": "e9c8ea8f-c5c6-438e-9d45-22ce269afde4"
+                }
+            ],
+            "source": "Manual",
+            "required": true
+        },
+        {
+            "id": "margin_top_web",
+            "type": "number",
+            "format": "slider",
+            "inputType": "range",
+            "label": "المسافة بين عناصر الصفحة الرئيسية (أساسي)",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-pin",
+            "value": "50",
+            "required": false,
+            "step": "5",
+            "minimum": "0",
+            "maximum": "50"
+        },
+        {
+            "id": "margin_top_mob",
+            "type": "number",
+            "format": "slider",
+            "inputType": "range",
+            "label": "المسافة بين عناصر الصفحة الرئيسية (جوال)",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-pin",
+            "value": "30",
+            "required": false,
+            "step": "5",
+            "minimum": "0",
+            "maximum": "50"
+        },
+        {
+            "id": "first_section_have_not_margin",
+            "type": "boolean",
+            "format": "switch",
+            "label": "أول عنصر في الصفحة الرئيسية لا يحتوي على مسافة من الأعلى",
+            "description": "هذه الخاصية تمكنك من التحكم في إضافة وحذف المسافة من الأعلى فى اول عنصر من الصفحة الرئيسية",
+            "labelHTML": null,
+            "icon": "sicon-toggle-off",
+            "value": true,
+            "selected": true,
+            "required": false
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "وضع عمودي للمنتجات في مربع المنتجات الثابتة في الصفحة الرئيسية",
+            "description": null,
+            "id": "vertical_fixed_products",
+            "format": "switch",
+            "required": false,
+            "value": false,
+            "selected": false
+        },
+        {
+            "id": "squar_photo_bg_image_size",
+            "type": "items",
+            "format": "dropdown-list",
+            "label": "طريقة عرض الصور في قسم قائمة عناصر ",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-list",
+            "selected": [
+                {
+                    "label": "اظهار الصورة كاملةً في المنتصف (Contain)",
+                    "value": "contain",
+                    "key": "f4adec13-6e4c-654b-b978-b2807935ced9"
+                }
+            ],
+            "options": [
+                {
+                    "label": "تغطية الصورة كامل المساحة مع المحافظة على أبعاد الصورة (Cover)",
+                    "value": "cover",
+                    "key": "e9c8ea8f-c5c6-234e-935-3bce269afde4"
+                },
+                {
+                    "label": "اظهار الصورة كاملةً في المنتصف (Contain)",
+                    "value": "contain",
+                    "key": "f4adec13-6e4c-654b-b978-b2807935ced9"
+                }
+            ],
+            "source": "Manual",
+            "required": true
+        },
+        {
+            "type": "boolean",
+            "id": "is_more_button_enabled",
+            "label": "عرض (زر الكل) في الصفحة الرئيسية",
+            "format": "switch"
+        },
+        {
+            "id": "arrows_pos",
+            "type": "items",
+            "format": "dropdown-list",
+            "label": "مكان الأسهم",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-keyboard_arrow_down",
+            "selected": [
+                {
+                    "label": "على الجانبين",
+                    "value": "outside-arrows",
+                    "key": "4c35572d-ab8a-48aa-9ce5-4bcb3e8dbad6"
+                }
+            ],
+            "options": [
+                {
+                    "label": "فى الأعلى",
+                    "value": "top-arrows",
+                    "key": "3936431d-0a9b-4d8a-aced-3e9070240cf4"
+                },
+                {
+                    "label": "على الجانبين",
+                    "value": "outside-arrows",
+                    "key": "4c35572d-ab8a-48aa-9ce5-4bcb3e8dbad6"
+                }
+            ],
+            "source": "Manual",
+            "multichoice": false,
+            "searchable": false,
+            "required": false
+        },
+        {
+            "id": "pagination_color",
+            "type": "string",
+            "format": "color",
+            "inputType": "color",
+            "label": "لون نقاط التنقل",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-format-fill",
+            "value": "#cdcf32",
+            "required": false
+        },
+        {
+            "id": "text_card_btn",
+            "type": "string",
+            "format": "text",
+            "label": "نص زرار الكارد",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "اكتب النص هنا ....",
+            "icon": "sicon-format-text-alt",
+            "value": null,
+            "multilanguage": true,
+            "required": false,
+            "minLength": "2",
+            "maxLength": "100"
+        },
+        {
+            "id": "setting_title_colors",
+            "type": "static",
+            "format": "description",
             "label": "خيارات الألوان الاساسية",
             "value": "<h5 class=\"bg-primary flex items-center p-4 mb-8 text-white rounded-lg\"><i class=\"sicon-art-palette ml-3 text-secondary text-xl\"></i>خيارات الألوان الاساسية</h5>",
             "variant": "h1",
@@ -1288,7 +1472,175 @@
             "icon": "sicon-format-fill",
             "value": "#272727",
             "required": false
+        },
+        {
+            "id": "whatsapp_btn_title",
+            "type": "static",
+            "format": "description",
+            "label": "زر الواتساب",
+            "value": "<h5 class='bg-primary flex items-center p-4 mb-8 text-white rounded-lg'><i class='sicon-whatsapp2 ml-3 text-secondary text-xl'></i>خيارات زر الواتساب</h5>",
+            "variant": "h1",
+            "icon": "sicon-format-size"
+            
+        },
+        {
+            "id": "show_whatsapp",
+            "type": "boolean",
+            "format": "switch",
+            "label": "إظهار أيقونة الواتساب",
+            "description": "هذه الخاصية تمكنك من التحكم في إظهار واخفاء ايقونة الواتساب",
+            "labelHTML": null,
+            "icon": "sicon-toggle-off",
+            "value": true,
+            "selected": true,
+            "required": false
+            
+        },
+        {
+            "id": "whatsapp_number",
+            "type": "number",
+            "format": "integer",
+            "inputType": "number",
+            "label": "رقم الواتساب",
+            "description": "اكتب رقم واتساب مع المفتاح الدولي بدون مسافات وبدون علامة بلس \"+\"",
+            "labelHTML": null,
+            "placeholder": "000000",
+            "icon": "sicon-hashtag",
+            "value": 0,
+            "required": false,
+            "minimum": 0,
+            "maximum": null,
+            "public": false,
+            "conditions": [
+                {
+                    "id": "show_whatsapp",
+                    "operation": "=",
+                    "value": true
+                }
+            ]
+            
+        },
+        {
+            "id": "whatsapp_msg",
+            "type": "string",
+            "format": "text",
+            "label": "نص رسالة الواتساب",
+            "description": null,
+            "labelHTML": null,
+            "placeholder": "يمكنك كتابة نص يظهر للزائر عند إرسال رسالة واتساب",
+            "icon": "sicon-format-text-alt",
+            "value": null,
+            "multilanguage": false,
+            "required": false,
+            "minLength": "0",
+            "maxLength": "300",
+            "conditions": [
+                {
+                    "id": "show_whatsapp",
+                    "operation": "=",
+                    "value": true
+                }
+            ]
+            
+        },
+        {
+            "id": "whatsapp_right",
+            "type": "boolean",
+            "format": "switch",
+            "label": "عرض أيقونة الواتساب على اليمين",
+            "description": null,
+            "labelHTML": null,
+            "icon": "sicon-toggle-off",
+            "value": true,
+            "selected": false,
+            "required": false,
+            "conditions": [
+                {
+                    "id": "show_whatsapp",
+                    "operation": "=",
+                    "value": true
+                }
+            ]
+            
+        },
+         {
+            "id": "loading_page_title",
+            "type": "static",
+            "format": "description",
+            "label": "صفحة التحميل",
+            "value": "<h5 class=\"bg-primary flex items-center p-4 mb-8 text-white rounded-lg\"><i class=\"sicon-spinner ml-3 text-secondary text-xl\"></i>خيارات صفحة التحميل</h5>",
+            "variant": "h1",
+            "icon": "sicon-format-size"
+        },
+        {
+            "id": "loader",
+            "type": "boolean",
+            "format": "switch",
+            "label": "خاصية التحميل",
+            "description": "هذه الخاصية تمكنك من إظهار واخفاء صفحة التحميل",
+            "labelHTML": null,
+            "icon": "sicon-toggle-off",
+            "value": true,
+            "selected": false,
+            "required": false
+        },
+        {
+            "id": "remove_loader_img",
+            "label": "حذف الصورة (الشعار)",
+            "description": "يمكنك حذف الصورة (الشعار) من صفحة التحميل",
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "format": "switch",
+            "required": false,
+            "value": false,
+            "selected": false,
+            "conditions": [
+                {
+                    "id": "loader",
+                    "operation": "=",
+                    "value": true
+                }
+            ]
+        },
+        {
+            "id": "change_loader_img",
+            "label": "تغير الصورة (الشعار)",
+            "description": "يمكنك تغيير الصورة (الشعار) من صفحة التحميل",
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "format": "switch",
+            "required": false,
+            "value": false,
+            "selected": false,
+            "conditions": [
+                {
+                    "id": "remove_loader_img",
+                    "operation": "=",
+                    "value": false
+                }
+            ]
+        },
+        {
+            "id": "loader_image",
+            "type": "string",
+            "format": "image",
+            "label": "الصورة",
+            "description": "أفضل مقاس للصورة: 250*100 بكسل",
+            "labelHTML": null,
+            "placeholder": "e.g. https://hostname.com/image.png",
+            "icon": "sicon-image",
+            "value": null,
+            "required": true,
+            "conditions": [
+                {
+                    "id": "change_loader_img",
+                    "operation": "=",
+                    "value": true
+                }
+            ]
         }
+        
+        
     ],
     "components": [
         {
