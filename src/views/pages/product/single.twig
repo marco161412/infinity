@@ -105,7 +105,7 @@
 							<div class="ribbon"><span>{{ product.promotion_title }}</span></div>
 						
 		
-					{% endif %}
+						{% endif %}
 						<salla-social-share class="inline-flex share-mob h-fit " aria-label="social share"></salla-social-share>
 
 						<salla-button class="btn--wishlist animated sws h-fit" data-id="{{ product.id }}" onclick="salla.wishlist.toggle('{{ product.id }}')" shape="icon" fill="outline" color="light">
@@ -150,6 +150,15 @@
 							</div>
 						{% endif %}
 					</salla-slider>
+					<div>{% for image in product.images %}
+									<div class="slide--one-fourth {{ image.video_url?'video-entry':'' }} {{ image.three_d_image_url?'model-entry':'' }}" data-caption="{{ image.alt }}">
+										{% if loop.index < 5 %}
+											<img src="{{ image.url }}" loading="eager" class="object-cover w-full h-full bg-gray-100 rounded-md overflow-hidden" title="{{ image.alt }}" alt="{{ image.alt }}"/>
+										{% else %}
+											<img data-src="{{ image.url }}" src="{{ 'images/s-empty.png' | cdn }}" class="object-cover w-full h-full lazy bg-gray-100 rounded-md overflow-hidden" title="{{ image.alt }}" alt="{{ image.alt }}"/>
+										{% endif %}
+									</div>
+								{% endfor %}</div>
 					<p class="img_zoom">{{ trans('custom.img_zoom') }}</p>
 				</div>
 			</div>
