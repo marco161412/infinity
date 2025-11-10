@@ -146,10 +146,7 @@
             "type": "boolean",
             "id": "transparent_header",
             "label": "أعلى الصفحة شفاف",
-            "format": "switch",
-            "groups": [
-                "header"
-            ]
+            "format": "switch"
         },
         {
             "id": "navbar",
@@ -161,10 +158,8 @@
             "icon": "sicon-toggle-off",
             "value": true,
             "selected": false,
-            "required": false,
-            "groups": [
-                "header"
-                ]       },
+            "required": false
+        },
         {
             "id": "discount_img",
             "type": "string",
@@ -175,10 +170,7 @@
             "placeholder": "e.g. https://hostname.com/image.png",
             "icon": "sicon-image",
             "value": null,
-            "required": false,
-            "groups": [
-                "header"
-            ]
+            "required": false
         },
         {
             "id": "header_trans_color",
@@ -197,9 +189,6 @@
                     "operation": "=",
                     "value": true
                 }
-            ],
-            "groups": [
-                "header"
             ]
         },
         {
@@ -1563,7 +1552,7 @@
             ]
             
         },
-         {
+        {
             "id": "loading_page_title",
             "type": "static",
             "format": "description",

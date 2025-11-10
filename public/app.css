@@ -22582,7 +22582,16 @@ body .store-header {
   --inputText:var(--color-input-text-header);
   --iconBack:var(--icons-back-color);
   --iconColor:var(--icons-color);
-  --primary:var(--color-primary);
+  /*
+  --color-trans-header
+  --color-back-header
+  --color-text-header
+  --color-input-back-header
+  --color-input-text-header
+  --color-dark-back-header
+  --color-dark-text-header
+  --color-dark-input-back-header
+  --color-dark-input-text-header*/
 }
 body .store-header .top-navbar {
   height: -moz-fit-content !important;
@@ -22948,7 +22957,6 @@ body.theme-dark {
   --inputText:var(--color-dark-input-text-header);
   --iconBack:var(--icons-dark-back-color);
   --iconColor:var(--icons-dark-color);
-  --primary:var(--color-dark-primary);
 }
 body:has(.home) .store-header:not(:has(.fixed-header)) .transparent-header {
   position: absolute;
@@ -23521,6 +23529,12 @@ body.dark-mode .customer-sec salla-orders .s-orders-wrapper .s-orders-table .s-o
 }
 .margin {
   margin-top: var(--margin-web) !important;
+}
+body {
+  --primary:var(--color-primary);
+}
+body.theme-dark {
+  --primary:var(--color-dark-primary);
 }
 body .but {
   width: 50px;

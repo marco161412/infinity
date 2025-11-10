@@ -3,7 +3,13 @@
     }
 
 
+body{
+  --primary:var(--color-primary);
 
+  &.theme-dark{
+    --primary:var(--color-dark-primary);
+  }
+}
 
 body {
   .but{

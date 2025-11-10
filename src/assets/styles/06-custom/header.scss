@@ -6,7 +6,20 @@ body{
         --inputText:var(--color-input-text-header);
         --iconBack:var(--icons-back-color);
         --iconColor:var(--icons-color);
-        --primary:var(--color-primary);
+        
+
+
+
+        /*
+        --color-trans-header
+        --color-back-header
+        --color-text-header
+        --color-input-back-header
+        --color-input-text-header
+        --color-dark-back-header
+        --color-dark-text-header
+        --color-dark-input-back-header
+        --color-dark-input-text-header*/
         .top-navbar{
             padding-top: unset;
             padding-bottom: unset;
@@ -417,7 +430,6 @@ body{
         --inputText:var(--color-dark-input-text-header);
         --iconBack:var(--icons-dark-back-color);
         --iconColor:var(--icons-dark-color);
-        --primary:var(--color-dark-primary);
     }
 }
 // body.theme-dark{
